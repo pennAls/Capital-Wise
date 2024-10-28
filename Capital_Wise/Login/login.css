@@ -13,58 +13,123 @@
 
 html, body {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 100vh;
+  background: #e0e1dd;
 }
 
-input,
-select,
-textarea,
-button {
+input, select, textarea, button {
   outline: 0;
 }
 
 .main-container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  background: #e0e1dd;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100dvw;
+  height: 100dvh;
+  max-width: 100%;
 }
 
 .logo-container {
-  width: 50%;
-  height: 100%;
+  flex: 1 1 50%;
+  min-height: 50vh;
   background: url(./imgs/logo.jpg) no-repeat center;
   background-size: cover;
+  max-width: 100%; /* Evita que o container cresça além da tela */
 }
 
 .login-container {
-  width: 50%;
-  height: 100%;
+  flex: 1 1 50%;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5%;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 100%;
 }
 
-.voltar-inicio { 
- 
+.voltar-inicio {
+  box-shadow: 5px 10px 5px 0px rgba(4, 1, 0, 0.3);
+  background-color: white;
+  font-family: Nunito, var(--default-font-family);
+  font-size: 1.5rem;
+  margin-top: 5%;
+  border-radius: 48px;
+  border: none;
+  padding: 1rem;
+  color: #0d1b2a;
+  max-width: 90%; /* Permite que se adapte ao contêiner */
 }
 
 .voltar-inicio:hover {
-  background-color:#0d1b2a;
+  background-color: #0d1b2a;
   color: white;
 }
 
 .box-login {
-
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  width: 80%;
+  max-width: 450px;
   background-color: #0d1b2a;
- 
- 
+  padding: 2rem;
 }
 
-.icon{
-  height: 350px;
+.icon {
+  height: 15rem;
 }
 
+label {
+  color: white;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
 
+input {
+  border-radius: 32px;
+  margin-top: 0.5rem;
+  display: flex;
+  height: 2.5rem;
+  border: none;
+ width: 300px;
+  padding-left: 1rem;
+}
+
+input::placeholder {
+  color: #000000;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+p {
+  padding-top: 0.25rem;
+  color: white;
+}
+
+.login-buttom {
+  margin-top: 1.5rem;
+  border-radius: 48px;
+  width: 90%;
+  max-width: 200px;
+  color: #ffffff;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #0051a7;
+  border: none;
+}
+
+.login-buttom:hover {
+  background-color: white;
+  color: #0051a7;
+}
