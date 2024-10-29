@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Registro</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="registro.css" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <form action="">
+        <div class="dual_form">
+          <div class="nome">
+            <label for="name">Nome Completo</label>
+            <input type="text" placeholder="CapitalWise" id="name" />
+          </div>
+          <div class="data">
+            <label for="date">Data</label>
+            <input type="date" placeholder="" id="date" />
+          </div>
+        </div>
+        <div class="dual_form">
+          <div class="telefone">
+            <label for="phone">Telefone</label>
+            <input type="tel" placeholder="+55 (XX) XXXX-XXXX" id="phone" />
+          </div>
+          <div class="email">
+            <label for="e-mail">E-mail</label>
+            <input
+              type="email"
+              placeholder="capitalwise@email.com"
+              id="e-mail"
+            />
+          </div>
+        </div>
+        <div class="dual_form">
+          <div class="senha">
+            <label for="password">Senha</label>
+            <input type="password" placeholder="********" id="senha" />
+          </div>
+          <div class="confirma_senha">
+            <label for="c_senha">Confirme a senha</label>
+            <input type="password" placeholder="********" id="c_senha" />
+          </div>
+        </div>
+        <img class="logo" src="/Capital_Wise/Login/imgs/logo.jpg" alt="" />
+        <div class="botoes">
+          <button class="back-buttom">Voltar</button>
+          <button class="register-buttom">Registre-se</button>
+        </div>
+      </form>
+      <div class="rg-container">
+        <div class="rg-frente">
+            <h2>RG:FRENTE</h2>
+            <figure class="rg">
+                <img src="/Capital_Wise/Login/imgs/rg_frente.png"calt="">
+                <img src="/Capital_Wise/Login/imgs/anexo.png" style="width: 80px;" alt="">
+            </figure>
+            
+        </div>
+        <div class="rg-costas">
+            <h2>RG:COSTAS</h2>
+            <figure class="rg">
+                <img src="/Capital_Wise/Login/imgs/rg_costas.png"calt="">
+                <img src="/Capital_Wise/Login/imgs/anexo.png" style="width: 80px;" alt="">
+            </figure>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
