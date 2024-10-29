@@ -172,7 +172,7 @@ input::placeholder {
     height: 450px;
 }
 
-h2{
+h2 {
     font-family: Roboto, var(--default-font-family);
     font-size: 1.75rem;
     font-weight: 700;
@@ -181,10 +181,17 @@ h2{
     color: white;
 }
 
-.rg{
+.rg {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     flex-direction: column;
+}
+
+.anexo {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
