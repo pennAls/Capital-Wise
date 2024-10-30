@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Ações Internacionais</title>
+    <style>
+        body {
+            background: #0e1e2e;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: #566E92;
+            color: #000000;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box; 
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            
+        }
+        nav ul li {
+            margin-right: 160px;
+        }
+        .centra-investimento {
+            font-size: 1.3em;
+            color: white;
+            text-decoration: none;
+        }
+        .centra-investimento:hover {
+            color: #c2c2c2;
+        }
+        .caixinha {
+            background-color: white;
+            color: black;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .caixinha:hover {
+            background-color: #f0f0f0;
+            color: #6DC2FF;
+        }
+        .grafico-container {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .grafico-pizza {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #6DC2FF 0% 25%,   
+                #8BFF6D 25% 50%,  
+                #FFAC60 50% 75%,  
+                #FF6060 75% 100%  
+            );
+        }
+        .caixas-grafico {
+            display: flex;
+            flex-direction: column;
+            margin-left: 100px;
+        }
+        .caixa {
+            width: 130px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-weight: bold;
+        }
+        .azul { background-color: #6DC2FF; }
+        .verde { background-color: #8BFF6D; }
+        .laranja { background-color: #FFAC60; }
+        .vermelho { background-color: #FF6060; }
+        .tabela-acoes {
+            width: 80%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #0e1e2e; 
+            border: 2px solid #415A77; 
+        }
+        .tabela-acoes th, .tabela-acoes td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #415A77; 
+            color: #fff;
+        }
+        .titulo-acoes {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.1em;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+        }
+        footer {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+        }
+        .caixa-voltar {
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .caixa-voltar:hover {
+            background-color: #f0f0f0;
+            color: #6DC2FF;
+        }
+        .caixa-voltar::before {
+            content: '← ';
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Tela de Inicio"><img src="https://cdn.discordapp.com/attachments/661231978074472459/1300659654166188097/image.png?ex=67224df2&is=6720fc72&hm=31ab5270bede5c5b16dc1dc8b4c4a834efc645c52e76f10d0e096c059b29a77a&" alt="Logo" width="90" height="70"></a></li>
+                <li><a href="Central de Ajuda" class="centra-investimento">Central de Ajuda</a></li>
+                <li><a href="Investimentos" class="centra-investimento">Investimentos</a></li>
+                <li><a href="Minha Carteira" class="caixinha">Minha Carteira</a></li>
+                <li><a href="Sair" class="caixinha">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grafico-container">
+        <div class="grafico-pizza"></div>
+        <div class="caixas-grafico">
+            <div class="caixa azul"></div>
+            <div class="caixa verde"></div>
+            <div class="caixa laranja"></div>
+            <div class="caixa vermelho"></div>
+        </div>
+    </div>
+
+    <h1 class="titulo-acoes">Minhas Ações Internacionais</h1>
+    <table class="tabela-acoes">
+        <tr>
+            <th>Nomes</th>
+            <th>Preços</th>
+            <th>Mudança 24h</th>
+            <th>Minha Carteira</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>R$</td>
+            <td>%</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>R$</td>
+            <td>%</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>R$</td>
+            <td>%</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>R$</td>
+            <td>%</td>
+            <td></td>
+        </tr>
+    </table>
+    <footer>
+        <a href="Voltar" class="caixa-voltar">Voltar</a>
+    </footer>
+</body>
+</html>
