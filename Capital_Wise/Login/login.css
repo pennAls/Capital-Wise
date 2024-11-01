@@ -33,7 +33,7 @@ input, select, textarea, button {
 .logo-container {
   flex: 1 1 50%;
   min-height: 50vh;
-  background: url(./imgs/logo.jpg) no-repeat center;
+  background: url(/Capital_Wise/imgs/logo.jpg) no-repeat center;
   background-size: cover;
   max-width: 100%; /* Evita que o container cresça além da tela */
 }
