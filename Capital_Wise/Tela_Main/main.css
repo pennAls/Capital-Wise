@@ -235,6 +235,7 @@ h3 {
 .sec_3 {
   background-color: #04142b;
   display: flex;
+  padding-bottom: 64px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -316,16 +317,57 @@ h3 {
 }
 
 .sec_4 {
-  margin-top: 64px;
-  background-color: #E0E1DD;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   flex-direction: row;
 }
 
-.half1_sec4{
-    background-image: url(/Capital_Wise/imgs/equipe.png);
+.half1_sec4 {
+  display: flex;
+  flex: 1 1 60%;
+  height: 500px;
+  background-image: url(/Capital_Wise/imgs/equipe.png);
   background-position: center;
   background-size: cover;
+}
+
+.half2_sec4 {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  flex: 1 1 40%;
+}
+
+.h2_sec4 {
+  line-height: 48px;
+}
+
+.p_sec4 {
+  text-align: left;
+  font-size: 18px;
+  padding-top: 16px;
+  padding-left: 64px;
+  padding-right: 94px;
+  padding-bottom: 24px;
+}
+
+.equipe-buttom {
+  color: #ffffff;
+  border-radius: 48px;
+  width: 140px;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  border: none;
+  padding: 16px;
+  background-color: #0051a7;
+}
+
+.equipe-buttom:hover {
+  background-color: #04142b;
+  color: white;
 }
