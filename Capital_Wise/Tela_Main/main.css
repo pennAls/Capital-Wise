@@ -160,7 +160,7 @@ h1 {
 .sec_2 {
   display: flex;
   margin-top: 64px;
-  margin-bottom: 64px;
+
   padding-top: 32px;
   flex-direction: column;
   flex-wrap: wrap;
@@ -187,7 +187,6 @@ hr {
 .card_div {
   margin-top: 48px;
   justify-content: space-evenly;
-  margin-bottom: 64px;
   align-items: center;
   display: flex;
   padding: 24px;
@@ -233,6 +232,100 @@ h3 {
   border-radius: 8px;
 }
 
-.sec_3{
- background-color: #04142B;
+.sec_3 {
+  background-color: #04142b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sec_3_h2 {
+  margin-top: 64px;
+  color: #ffffff;
+  font-family: Orelega One, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 600;
+}
+.sec_3_p {
+  color: #ffffff;
+  font-family: Roboto, var(--default-font-family);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.aulas,
+.graficos,
+.investimentos {
+  margin-top: 64px;
+  background-color: #e0e1dd;
+  border-radius: 24px;
+  width: 70%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+
+.half1 {
+  padding: 36px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 40%;
+}
+
+.half2_aula {
+  display: flex;
+  flex: 1 1 60%;
+  background-image: url(/Capital_Wise/imgs/aulas.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.sec_3_h3 {
+  color: #04142b;
+  font-family: Play, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 24px;
+  line-height: 36px;
+}
+
+.half2_grafico {
+  display: flex;
+  flex: 1 1 60%;
+  background-image: url(/Capital_Wise/imgs/gif_graficos.gif);
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.half2_investimentos {
+  display: flex;
+  flex: 1 1 60%;
+  background-image: url(/Capital_Wise/imgs/Tipos-de-fundo-Yubb-para-Mais-Retorno.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.sec_4 {
+  margin-top: 64px;
+  background-color: #E0E1DD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.half1_sec4{
+    background-image: url(/Capital_Wise/imgs/equipe.png);
+  background-position: center;
+  background-size: cover;
 }
