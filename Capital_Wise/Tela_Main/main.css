@@ -1,0 +1,182 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background: #e0e1dd;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #04142b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 104px;
+}
+
+.box_header {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.icon {
+  height: 100px;
+  width: fit-content;
+}
+
+.link {
+  color: white;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link_box {
+  gap: 96px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding-left: 96px;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+.button_box {
+  display: flex;
+  gap: 24px;
+  padding-left: 96px;
+}
+
+.register-buttom,
+.login-buttom {
+  border-radius: 48px;
+  width: 140px;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  border: none;
+}
+
+.register-buttom {
+  color: #04142b;
+  padding: 16px;
+  background-color: white;
+}
+
+.register-buttom:hover {
+  color: white;
+  background-color: #0051a7;
+  cursor: pointer;
+}
+
+.login-buttom {
+  color: #ffffff;
+  padding: 16px;
+  background-color: #0051a7;
+}
+
+.login-buttom:hover {
+  background-color: white;
+  color: #0051a7;
+}
+
+.box_h1 {
+    position: relative;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  color: #04142b;
+  font-family: Odor Mean Chey, var(--default-font-family);
+  font-size: 76px;
+  font-weight: 650;
+  padding-bottom: 32px;
+  line-height: 80px;
+}
+
+.h1_desc {
+  color: #04142b;
+  margin-left: 96px;
+  margin-right: 96px;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 28px;
+  font-weight: lighter;
+  line-height: 32px;
+  letter-spacing: 1.6px;
+}
+
+.imagem1_main {
+  padding-top: 24px;
+  width: 300px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.icon-container figure img {
+  width: 100px;
+}
+
+.sec_2 {
+  display: flex;
+  margin-top: 64px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h2 {
+  text-align: center;
+  color: #04142b;
+  font-family: Orelega One, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+hr {
+  text-align: center;
+  border: none;
+  border-top: 4px solid #04142b;
+  width: 80%;
+  margin: 20px 0;
+}

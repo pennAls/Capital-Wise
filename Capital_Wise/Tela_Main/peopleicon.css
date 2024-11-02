@@ -1,0 +1,59 @@
+@media (max-width: 1368px) {
+  .people1 {
+    width: 100px;
+    position: absolute;
+    left: 5vw;
+    top: -5vh;
+  }
+
+  .people3 {
+    width: 100px;
+    position: absolute;
+    left: 70vw;
+    bottom: 10vh;
+  }
+
+  .people2 {
+    width: 100px;
+    position: absolute;
+    left: 15vw;
+    bottom: 25vh;
+  }
+
+  .people4 {
+    width: 100px;
+    position: absolute;
+    left: 85vw;
+    top: 10vh;
+  }
+}
+
+@media (max-width: 1920px) and (min-width: 1368px) {
+  .people1 {
+    width: 100px;
+    position: absolute;
+    left: 20vw;
+    top: 0vh;
+  }
+
+  .people3 {
+    width: 100px;
+    position: absolute;
+    left: 75vw;
+    bottom: 10vh;
+  }
+
+  .people2 {
+    width: 100px;
+    position: absolute;
+    left: 20vw;
+    bottom: 0vh;
+  }
+
+  .people4 {
+    width: 100px;
+    position: absolute;
+    left: 75vw;
+    top: 5vh;
+  }
+}
