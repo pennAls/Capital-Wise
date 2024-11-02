@@ -114,7 +114,7 @@ a:hover {
 }
 
 .box_h1 {
-    position: relative;
+  position: relative;
   margin-top: 64px;
   display: flex;
   flex-direction: column;
@@ -160,8 +160,11 @@ h1 {
 .sec_2 {
   display: flex;
   margin-top: 64px;
+  margin-bottom: 64px;
+  padding-top: 32px;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: #d0d0d0;
 }
 
 h2 {
@@ -171,12 +174,65 @@ h2 {
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
+  margin-bottom: 16px;
 }
 
 hr {
-  text-align: center;
   border: none;
   border-top: 4px solid #04142b;
-  width: 80%;
-  margin: 20px 0;
+  width: 90%;
+  margin: auto;
+}
+
+.card_div {
+  margin-top: 48px;
+  justify-content: space-evenly;
+  margin-bottom: 64px;
+  align-items: center;
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+  flex-direction: row;
+}
+
+.iconcard {
+  width: 120px;
+}
+
+.pcard {
+  color: #04142b;
+  font-family: Roboto, var(--default-font-family);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+h3 {
+  color: #04142b;
+  font-family: Odor Mean Chey, var(--default-font-family);
+  font-size: 36px;
+  margin-bottom: 12px;
+  line-height: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+.card1,
+.card2,
+.card3,
+.card4 {
+  display: flex;
+  padding: 16px;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #e0e1dd;
+  height: 380px;
+  width: 300px;
+  border-radius: 8px;
+}
+
+.sec_3{
+ background-color: #04142B;
 }

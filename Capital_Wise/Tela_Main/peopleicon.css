@@ -56,4 +56,13 @@
     left: 75vw;
     top: 5vh;
   }
+  .card_div {
+    margin-top: 48px;
+    justify-content: center;
+    margin-bottom: 64px;
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+  }
 }
