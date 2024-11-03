@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
-    <link rel="stylesheet" href="login.css" />
-    <script src="login.js" defer></script>
-    
-  </head>
-  <body>
-    <div class="main-container">
-      <div class="logo-container"></div>
-      <div class="login-container"> 
-          <button class="voltar-inicio">Voltar para o Início</button>
-        <div class="box-login">
-          <img class="icon" src="/Capital_Wise/imgs/icon.png" alt="">
-          <form action="">
-            <label for="email" plac>Email:</label>
-            <input type="email" name="email" placeholder="capitalwise@email.com">
-            <br>
-            <label for="password" plac>Senha:</label>
-            <input type="password" name="password" placeholder="1245">
-            <p>Esqueceu a sua senha?</p>
-          </form>
-          <button class="login-buttom">Login</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+  <link rel="stylesheet" href="login.css" />
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="logo-container"></div>
+    <div class="login-container">
+      <button class="voltar-inicio">Voltar para o Início</button>
+      <div class="box-login">
+        <img class="icon" src="/Capital_Wise/imgs/icon.png" alt="">
+        <form action="submit">
+          <label for="email">Email:</label>
+          <input id="email" type="email" name="email" placeholder="capitalwise@email.com" required>
+          <br>
+          <label for="password">Senha:</label>
+          <input id="password" type="password" name="password" placeholder="****" required>
+          <p>Esqueceu a sua senha?</p>
+          <div class="b">
+            <button type="submit" class="login-buttom">Login</button>
+          </div>     
+        </form>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

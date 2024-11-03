@@ -135,12 +135,18 @@ class SaveData {
       email: document.getElementById("email").value,
       senha: document.getElementById("senha").value,
     };
+
     const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const emailExists = users.some((user) => user.email === userData.email);
+    if (emailExists) {
+      window.alert("Já existe alguém cadastrado com esse usuário");
+      return;
+    }
     users.push(userData);
     localStorage.setItem("users", JSON.stringify(users));
   }
 }
-
 
 const form = new Form();
 
@@ -155,7 +161,13 @@ submittedform.addEventListener("submit", (event) => {
     document.getElementById("c_senha").value
   );
 
-  if (!form.nameValid || !form.dataValid || !form.phoneValid || !form.emailValid || !form.senhaValid) {
+  if (
+    !form.nameValid ||
+    !form.dataValid ||
+    !form.phoneValid ||
+    !form.emailValid ||
+    !form.senhaValid
+  ) {
     event.preventDefault();
     window.alert("Informações Inválidas");
   } else {

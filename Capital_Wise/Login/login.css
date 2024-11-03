@@ -114,6 +114,13 @@ p {
   color: white;
 }
 
+.b{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .login-buttom {
   margin-top: 1.5rem;
   border-radius: 48px;
