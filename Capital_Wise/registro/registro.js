@@ -130,11 +130,17 @@ cSenhaInput.addEventListener("input", (event) => {
 
 class SaveData {
   saveInfo() {
-    localStorage.setItem("User", document.getElementById("name").value);
-    localStorage.setItem("E-mail", document.getElementById("email").value);
-    localStorage.setItem("Password", document.getElementById("senha").value);
+    const userData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      senha: document.getElementById("senha").value,
+    };
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push(userData);
+    localStorage.setItem("users", JSON.stringify(users));
   }
 }
+
 
 const form = new Form();
 
