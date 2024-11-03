@@ -22,27 +22,33 @@ const senhaError = document.getElementById("senhaError");
 
 class Form {
   constructor() {
-    this.valid = true;
+    this.nameValid = true;
+    this.dataValid = true;
+    this.phoneValid = true;
+    this.emailValid = true;
+    this.senhaValid = true;
   }
 
   checkName(nameValue) {
-    this.valid = true;
     for (let letra of nameValue) {
       if (!isNaN(letra) && letra !== " ") {
         nameError.style.display = "block";
-        this.valid = false;
+        this.nameValid = false;
         break; // Sai do loop se encontrar um erro
       } else if (/[^a-zA-Z0-9À-ÿ\s]/.test(letra)) {
         nameError.style.display = "block";
-        this.valid = false;
+        this.nameValid = false;
         break;
+      } else {
+        this.nameValid = true;
+        nameError.style.display = "none";
       }
     }
   }
 
   checkDate(dateValue) {
-    this.valid = true;
     if (/^\d{4}-\d{2}-\d{2}$/.test(dateValue)) {
+      this.dataValid = true;
       const [year, month, day] = dateValue.split("-").map(Number);
       const birthDate = new Date(year, month - 1, day);
       const today = new Date();
@@ -54,47 +60,46 @@ class Form {
 
       if (age < 18 || (age === 18 && !hasHadBirthday)) {
         dateError.style.display = "block";
-        this.valid = false;
+        this.dataValid = false;
       } else {
         dateError.style.display = "none";
       }
     } else {
       dateError.style.display = "block";
-      this.valid = false;
+      this.dataValid = false;
     }
   }
 
   checktel(telValue) {
-    this.valid = true;
     if (/^\+\d{2}\s\d{2}\s\d{4}-\d{4}$/.test(telValue)) {
+      this.phoneValid = true;
       telError.style.display = "none";
     } else {
       telError.style.display = "block";
-      this.valid = false;
+      this.phoneValid = false;
     }
   }
 
   checkemail(emailValue) {
-    this.valid = true;
     if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+      this.emailValid = true;
       emailError.style.display = "none";
     } else {
       emailError.style.display = "block";
-      this.valid = false;
+      this.emailValid = false;
     }
   }
 
   checksenha(senha1, senha2) {
-    this.valid = true;
     if (senha1 === senha2) {
       senhaError.style.display = "none";
+      this.senhaValid = true;
     } else {
       senhaError.style.display = "block";
-      this.valid = false;
+      this.senhaValid = false;
     }
   }
 }
-
 
 document.getElementById("name").addEventListener("input", (event) => {
   form.checkName(event.target.value);
@@ -144,11 +149,11 @@ submittedform.addEventListener("submit", (event) => {
     document.getElementById("c_senha").value
   );
 
-  if (!form.valid) {
+  if (!form.nameValid || !form.dataValid || !form.phoneValid || !form.emailValid || !form.senhaValid) {
     event.preventDefault();
     window.alert("Informações Inválidas");
-  } else{
-    const data = new SaveData
+  } else {
+    const data = new SaveData();
     data.saveInfo();
   }
 });
