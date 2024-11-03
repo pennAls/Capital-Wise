@@ -20,51 +20,94 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
     <link rel="stylesheet" href="registro.css" />
+    <script src="registro.js" defer></script>
   </head>
 
   <body>
     <div class="main-container">
-      <form action="">
+      <form id="registrationForm" action="#" method="POST">
         <div class="dual_form">
           <div class="nome">
             <label for="name">Nome Completo</label>
-            <input type="text" placeholder="CapitalWise" id="name" />
+            <input type="text" placeholder="CapitalWise" id="name" required />
+            <span
+              class="error-message"
+              id="nameError"
+              style="display: none; color: red"
+              >O nome não pode conter números ou caracteres especiais.</span
+            >
           </div>
           <div class="data">
             <label for="date">Data</label>
-            <input type="date" placeholder="" id="date" />
+            <input type="date" id="date" required />
+            <span
+              class="error-message"
+              id="dateError"
+              style="display: none; color: red"
+              >Insira uma data válida.</span
+            >
           </div>
         </div>
         <div class="dual_form">
           <div class="telefone">
             <label for="phone">Telefone</label>
-            <input type="tel" placeholder="+55 (XX) XXXX-XXXX" id="phone" />
+            <input
+              type="tel"
+              placeholder="+55 XX XXXX-XXXX"
+              id="phone"
+              required
+            />
+            <span
+              class="error-message"
+              id="telError"
+              style="display: none; color: red"
+              >Insira um telefone válido (Siga o formato recomendado).</span
+            >
           </div>
           <div class="email">
-            <label for="e-mail">E-mail</label>
+            <label for="email">E-mail</label>
             <input
               type="email"
               placeholder="capitalwise@email.com"
-              id="e-mail"
+              id="email"
+              required
             />
+            <span
+              class="error-message"
+              id="emailError"
+              style="display: none; color: red"
+              >Insira um email válido.</span
+            >
           </div>
         </div>
         <div class="dual_form">
           <div class="senha">
-            <label for="password">Senha</label>
-            <input type="password" placeholder="********" id="senha" />
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="********" id="senha" required />
           </div>
           <div class="confirma_senha">
             <label for="c_senha">Confirme a senha</label>
-            <input type="password" placeholder="********" id="c_senha" />
+            <input
+              type="password"
+              placeholder="********"
+              id="c_senha"
+              required
+            />
+            <span
+            class="error-message"
+            id="senhaError"
+            style="display: none; color: red"
+            >As senhas precisam ser iguais.</span
+          >
           </div>
         </div>
         <img class="logo" src="/Capital_Wise/imgs/logo.jpg" alt="" />
         <div class="botoes">
-          <button class="back-buttom">Voltar</button>
-          <button class="register-buttom">Registre-se</button>
+          <button type="button" class="back-buttom">Voltar</button>
+          <button type="submit" class="register-buttom">Registre-se</button>
         </div>
       </form>
+
       <div class="rg-container">
         <div class="rg-frente">
           <h2>RG:FRENTE</h2>
