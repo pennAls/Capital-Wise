@@ -130,9 +130,9 @@ cSenhaInput.addEventListener("input", (event) => {
 
 class SaveData {
   saveInfo() {
-    localStorage.setItem(document.getElementById("name").value);
-    localStorage.setItem(document.getElementById("email").value);
-    localStorage.setItem(document.getElementById("senha").value);
+    localStorage.setItem("User", document.getElementById("name").value);
+    localStorage.setItem("E-mail", document.getElementById("email").value);
+    localStorage.setItem("Password", document.getElementById("senha").value);
   }
 }
 
