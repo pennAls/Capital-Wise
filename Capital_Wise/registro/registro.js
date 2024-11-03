@@ -27,6 +27,7 @@ class Form {
     this.phoneValid = true;
     this.emailValid = true;
     this.senhaValid = true;
+    this.userValid = true;
   }
 
   checkName(nameValue) {
@@ -141,10 +142,12 @@ class SaveData {
     const emailExists = users.some((user) => user.email === userData.email);
     if (emailExists) {
       window.alert("Já existe alguém cadastrado com esse usuário");
+      this.userValid = false;
       return;
     }
     users.push(userData);
     localStorage.setItem("users", JSON.stringify(users));
+    return true;
   }
 }
 
@@ -172,6 +175,10 @@ submittedform.addEventListener("submit", (event) => {
     window.alert("Informações Inválidas");
   } else {
     const data = new SaveData();
-    data.saveInfo();
+    const success = data.saveInfo();
+
+    if (!success) {
+      event.preventDefault();
+    }
   }
 });
