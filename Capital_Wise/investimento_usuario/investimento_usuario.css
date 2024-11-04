@@ -8,30 +8,131 @@ body {
     margin: 0;
     padding: 0; 
 }
+
 header {
-    background: #566E92;
-    color: #000000;
-    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    margin-bottom: 64px;
+    z-index: 10;
     width: 100%;
-    text-align: center;
-    box-sizing: border-box; 
-}
-nav {
+    background-color: #566E92;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 104px;
+  }
+  
+  .box_header {
+    padding: 16px;
+    display: flex;
     justify-content: center;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    
-}
-nav ul li {
-    margin-right: 160px;
-}
+  }
+  .icon {
+    height: 100px;
+    width: fit-content;
+  }
+  
+  .link1,
+  .link2 {
+    color: white;
+    font-family: Roboto, var(--default-font-family);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .link_box {
+    gap: 96px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    padding-left: 96px;
+  }
+  
+  a:hover {
+    color: #04142b
+  }
+  
+  .button_box {
+    display: flex;
+    gap: 48px;
+    padding-left: 96px;
+  }
+  
+  .sair-buttom {
+    cursor: pointer;
+    border-radius: 48px;
+    width: 140px;
+    font-family: Roboto, var(--default-font-family);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5rem;
+    border: none;
+  }
+  
+  .wallet{
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .people{
+      width: 80px;
+      position: relative;
+      right: 15%;
+  }
+  
+  .wallet-buttom {
+    cursor: pointer;
+    padding-left: 36px !important;
+    border-radius: 48px;
+    align-items: center;
+    display: flex;
+    width: 400px;
+    font-family: Roboto, var(--default-font-family);
+    font-size: 1rem;
+    overflow: hidden; /* Oculta qualquer texto que ultrapasse */
+    text-align: center;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.5rem;
+    border: none;
+  }
+  
+  .sair-buttom {
+    color: #04142b;
+    padding: 16px;
+    background-color: white;
+  }
+  
+  .sair-buttom:hover {
+    color: white;
+    background-color: #04142b;
+    cursor: pointer;
+  }
+  
+  .wallet-buttom {
+    color: #04142b;
+    padding: 16px;
+    background-color: #d9d9d9;
+  }
+  
+  .wallet-buttom:hover {
+    background-color: white;
+    color: #0051a7;
+  }
+  
+  hr {
+    border: none;
+    border-top: 4px solid #04142b;
+  }
+
+
+
 .centra-investimento {
     font-size: 1.3em;
     color: white;
