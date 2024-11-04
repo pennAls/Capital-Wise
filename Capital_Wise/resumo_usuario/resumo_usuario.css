@@ -1,275 +1,373 @@
 body {
-    background: #415A77;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  background: #415a77;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background: #04142B;
-    color: #000000;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #04142b;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  height: 104px;
 }
 
-nav {
+.box_header {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.icon {
+  height: 100px;
+  width: fit-content;
+}
+
+.link1,
+.link2 {
+  color: white;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link_box {
+  gap: 96px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding-left: 96px;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+.button_box {
+  display: flex;
+  gap: 48px;
+  padding-left: 96px;
+}
+
+.sair-buttom {
+  cursor: pointer;
+  border-radius: 48px;
+  width: 140px;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  border: none;
+}
+
+.wallet{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
+.people{
+    width: 80px;
+    position: relative;
+    right: 15%;
 }
 
-nav ul li {
-    margin-right: 160px;
+.wallet-buttom {
+  cursor: pointer;
+  padding-left: 36px !important;
+  border-radius: 48px;
+  align-items: center;
+  display: flex;
+  width: 400px;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1rem;
+  overflow: hidden; /* Oculta qualquer texto que ultrapasse */
+  text-align: center;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.5rem;
+  border: none;
+}
+
+.sair-buttom {
+  color: #04142b;
+  padding: 16px;
+  background-color: white;
+}
+
+.sair-buttom:hover {
+  color: white;
+  background-color: #0051a7;
+  cursor: pointer;
+}
+
+.wallet-buttom {
+  color: #04142b;
+  padding: 16px;
+  background-color: #d9d9d9;
+}
+
+.wallet-buttom:hover {
+  background-color: white;
+  color: #0051a7;
+}
+
+hr {
+  border: none;
+  border-top: 4px solid #04142b;
 }
 
 .centra-investimento {
-    font-size: 1.3em;
-    color: white;
-    text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
 }
 
 .centra-investimento:hover {
-    color: #c2c2c2;
+  color: #c2c2c2;
 }
 
 .caixinha {
-    background-color: white;
-    color: black;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .caixinha:hover {
-    background-color: #fbfbfb;
-    color: #6DC2FF;
+  background-color: #fbfbfb;
+  color: #6dc2ff;
 }
 
 .faixa-investimentos {
-    background-color: #D9D9D9;
-    color: black;
-    width: 100%;
-    padding: 15px;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: left;
-    box-sizing: border-box;
+  background-color: #d9d9d9;
+  color: black;
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-sidebar, content {
-    width: 48%;
+sidebar,
+content {
+  width: 48%;
 }
 
 .titulo-carteira {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .ativos-carteira {
-    font-size: 0.9em;
-    color: #B0B0B0;
-    margin-bottom: 20px;
+  font-size: 0.9em;
+  color: #b0b0b0;
+  margin-bottom: 20px;
 }
 
 .grafico-caixa {
-    background-color: #506A88;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #506a88;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grafico-titulo {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
 }
 
 .grafico-pizza {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    background: conic-gradient(
-        #ca0606 0% 25%,
-        #000000 25% 50%,
-        #ffae17 50% 75%,
-        #21a6df 75% 100%
-    );
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ca0606 0% 25%,
+    #000000 25% 50%,
+    #ffae17 50% 75%,
+    #21a6df 75% 100%
+  );
 }
 
 .total-atual {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .valor-atual {
-    font-size: 1.5em;
-    color: #ffffff;
-    font-weight: bold;
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .diversificacao-titulo {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .diversificacao-instrucao {
-    font-size: 0.9em;
-    color: #B0B0B0;
-    margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #b0b0b0;
+  margin-bottom: 15px;
 }
 
 .caixa-direita {
-    display: flex;
-    align-items: center;
-    background-color: #506A88;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #506a88;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.grafico-cripto, .grafico-nacional, .grafico-internacional, .grafico-fundos {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: relative;
-    margin-right: 10px;
+.grafico-cripto,
+.grafico-nacional,
+.grafico-internacional,
+.grafico-fundos {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
 }
 
 .grafico-cripto {
-    background: conic-gradient(#ff5757 0% 60%, #fd9999 60% 100%);
+  background: conic-gradient(#ff5757 0% 60%, #fd9999 60% 100%);
 }
 
 .grafico-nacional {
-    background: conic-gradient(#ffa600 0% 80%, #ffd096 80% 100%);
+  background: conic-gradient(#ffa600 0% 80%, #ffd096 80% 100%);
 }
 
 .grafico-internacional {
-    background: conic-gradient(#000000 0% 90%, #383838 90% 100%);
+  background: conic-gradient(#000000 0% 90%, #383838 90% 100%);
 }
 
 .grafico-fundos {
-    background: conic-gradient(#4ca5ff 0% 85%, #95d5ff 85% 100%);
+  background: conic-gradient(#4ca5ff 0% 85%, #95d5ff 85% 100%);
 }
 
 .grafico-cripto::after {
-    content: "40%";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.8em;
-    color: #fff;
-    font-weight: bold;
+  content: "40%";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
+  color: #fff;
+  font-weight: bold;
 }
 
 .grafico-nacional::after {
-    content: "20%";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.8em;
-    color: #fff;
-    font-weight: bold;
+  content: "20%";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
+  color: #fff;
+  font-weight: bold;
 }
 
 .grafico-internacional::after {
-    content: "10%";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.8em;
-    color: #fff;
-    font-weight: bold;
+  content: "10%";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
+  color: #fff;
+  font-weight: bold;
 }
 
 .grafico-fundos::after {
-    content: "15%";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.8em;
-    color: #fff;
-    font-weight: bold;
+  content: "15%";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
+  color: #fff;
+  font-weight: bold;
 }
 
 .caixa-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .titulo-direita {
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .valor-direita {
-    font-size: 0.8em;
-    color: #ffffff;
+  font-size: 0.8em;
+  color: #ffffff;
 }
 
 footer {
-    position: fixed;
-    bottom: 30px;
-    left: 20px;
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
 }
 
 .caixa-voltar {
-    background-color: white;
-    color: black;
-    padding: 10px 15px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .caixa-voltar:hover {
-    background-color: #f0f0f0;
-    color: #6DC2FF;
+  background-color: #f0f0f0;
+  color: #6dc2ff;
 }
 
 .caixa-voltar::before {
-    content: '← ';
-    font-size: 1.2em;
-    margin-right: 5px;
+  content: "← ";
+  font-size: 1.2em;
+  margin-right: 5px;
 }

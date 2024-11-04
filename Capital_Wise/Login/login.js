@@ -29,7 +29,10 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
   if (userExists) {
     sessionStorage.setItem("token", generateToken());
-    window.location.href = "/Capital_Wise/Tela_main/main.html";
+    for (const user of users) {
+      sessionStorage.setItem("loggedInUserEmail",user.email);
+    }
+    window.location.href = "/Capital_Wise/resumo_usuario/resumo_usuario.html";
   } else {
     window.alert("Usuário ou senha incorretos.");
   }
@@ -41,18 +44,4 @@ function generateToken(length = 32) {
   return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
     ""
   );
-}
-
-
-const timeOutSession = () => {
-  sessionStorage.clear();
-  window.location.href = "/Capital_Wise/Tela_main/main.html";
-};
-
-let tempoParaTimeout = 10000;
-
-const haveToken = sessionStorage.getItem("token") || false;
-
-if (haveToken) {
-  setTimeout(timeOutSession, tempoParaTimeout);
 }
