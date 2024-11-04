@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatContent = document.getElementById('chatContent');
     
 
-  
-    let isChatStarted = false; 
+    // Função para abrir o chat e iniciar a animação de boas-vindas
+    let isChatStarted = false; // Nova variável para controlar o estado do chat
     function toggleChat() {
         if (chatBox.style.display === 'none' || chatBox.style.display === '') {
             chatBox.style.display = 'block';
-            if (!isChatStarted) { 
-                isChatStarted = true; 
-                showTypingAnimation(); 
+            if (!isChatStarted) { // Verifica se a conversa já foi iniciada
+                isChatStarted = true; // Marca que o chat foi iniciado
+                showTypingAnimation(); // Inicia a animação apenas na primeira abertura
             }
         } else {
             confirmationBox.style.display = 'block';
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    // Adiciona os eventos para os botões
     document.querySelector('.chat-button').addEventListener('click', toggleChat);
 
     closeButton.addEventListener('click', function() {
@@ -33,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    
+
+    // Animação de "digitando..."
     function showTypingAnimation() {
         const typingMessage = document.createElement('div');
         typingMessage.classList.add('chat-message');
@@ -42,10 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             typingMessage.remove();
             showWelcomeMessages();
-        }, 2000); 
+        }, 2000); // 2 segundos
     }
 
-   
+    // Mensagens de boas-vindas
     function showWelcomeMessages() {
         const welcomeMessages = [
             "Olá, bem-vindo ao suporte da Capital Wise! Como podemos ajudá-lo hoje?",
@@ -61,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(showOptions, welcomeMessages.length * 2000);
     }
 
- 
+    // Adiciona opções ao chat
     function showOptions() {
         const optionsContainer = document.createElement('div');
         optionsContainer.classList.add('options');
@@ -86,32 +90,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showResponse(option) {
+        // Adiciona a mensagem do usuário ao chat
         addMessageToChat(option, 'user'); 
-        document.getElementById("messageContainer").style.display = "block"; 
+        document.getElementById("messageContainer").style.display = "block"; // Sempre exibe o input de mensagem
     
-        
+        // Esconde as opções após a seleção
         clearOptions();
         
-      
+        // Lógica para opções específicas
         if (option === 'Falar com um Atendente') {
+            // Mensagens para iniciar a interação com o atendente
             addMessageToChat("Você escolheu falar com um atendente. Por favor, aguarde enquanto conectamos você a um de nossos representantes.", 'chatbot');
     
-           
+            // Aguarda 2 segundos antes de enviar a próxima mensagem
             setTimeout(() => {
                 addMessageToChat("Qual é o assunto que você gostaria de discutir com nosso atendente? Isso nos ajudará a direcionar sua consulta.", 'chatbot');
-            }, 3000); 
+            }, 3000); // 2000 milissegundos = 2 segundos
             
-          
+            // Aqui você pode implementar a lógica para realmente conectar o usuário ao atendente,
+            // como uma chamada de função que inicia o processo de atendimento.
             
         } else if (option === 'Conta e Login') {
             const response = "Como posso ajudar com sua conta na Capital Wise? Selecione uma opção abaixo:";
             addMessageToChat(response, 'chatbot');
-            showAccountOptions(); 
+            showAccountOptions(); // Mover esta linha para depois de adicionar a resposta do chatbot
             
         } else if (option === 'Falar sobre outro assunto') {
             const response = "Por favor, descreva o assunto que você gostaria de discutir.";
             addMessageToChat(response, 'chatbot');
-            clearOptions(); 
+            clearOptions(); // Remove as opções anteriores e mostra as opções iniciais novamente
             
         } else {
             const response = `Como posso ajudá-lo com ${option}? Selecione uma opção abaixo ou faça uma pergunta:`;
@@ -123,11 +130,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function clearOptions() {
         const optionsContainer = document.querySelector('.options');
         if (optionsContainer) {
-            optionsContainer.remove(); 
+            optionsContainer.remove(); // Remove as opções de seleção
         }
     }
     
-   
+    // Função para mostrar opções de "Conta e Login"
     function showAccountOptions() {
         const optionsContainer = document.createElement('div');
         optionsContainer.classList.add('options');
@@ -153,11 +160,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('chatContent').appendChild(optionsContainer);
     }
     
-  
+    // Função para lidar com as opções de conta
 function handleAccountOption(action) {
-    addMessageToChat(action, 'user'); 
+    addMessageToChat(action, 'user'); // Adiciona a mensagem do usuário ao chat
+     // Limpa as opções após a seleção
      clearOptions();
 
+    // Aqui você pode adicionar lógica específica para cada opção
     let response;
     switch (action) {
         case 'Abertura de Conta':
@@ -171,7 +180,7 @@ function handleAccountOption(action) {
             break;
         case 'Redefinição de Senha':
             showPasswordResetSteps();
-            return; 
+            return; // Sai da função para não adicionar uma mensagem
         case 'Como Inserir Código de Convite':
             response = "Para inserir um código de convite, vá até a seção de cadastro durante a abertura de conta.";
             break;
@@ -179,17 +188,17 @@ function handleAccountOption(action) {
             response = "Para mais informações sobre cadastro, consulte a seção de ajuda em nosso site.";
             break;
         case 'Voltar ao Menu Principal':
-            showOptions(); 
-            return; 
+            showOptions(); // Volta para as opções principais
+            return; // Sai da função para não adicionar uma mensagem
         default:
             response = "Desculpe, não entendi isso.";
     }
     
 
-    addMessageToChat(response, 'chatbot'); 
+    addMessageToChat(response, 'chatbot'); // Adiciona a resposta do chatbot
 }
 
-
+// Função para mostrar os passos da redefinição de senha em inputs
 function showPasswordResetSteps() {
     const steps = [
         "Acesse a página de login e clique em 'Esqueci minha senha'.",
@@ -200,11 +209,12 @@ function showPasswordResetSteps() {
         "Conseguiu criar sua nova senha? Caso contrário, entre em contato com nosso suporte."
     ];
 
-
+    // Exibe cada passo com um intervalo
     steps.forEach((message, index) => {
         setTimeout(() => {
             addMessageToChat(message, 'chatbot');
 
+            // Se for o último passo, mostrar a caixa de confirmação
             if (index === steps.length - 1) {
                 showConfirmationBox();
             }
@@ -213,6 +223,7 @@ function showPasswordResetSteps() {
 }
 
 function showConfirmationBox() {
+    // Verifica se já existe uma caixa de confirmação e remove
     const existConfirmationContainer = document.querySelector('.confirmation-container');
     if (existConfirmationContainer) {
         existConfirmationContainer.remove();
@@ -225,7 +236,7 @@ function showConfirmationBox() {
     
     confirmContainer.appendChild(pergunta);
 
-    const yesButton = document.createElement('button'); 
+    const yesButton = document.createElement('button'); // Corrigido de 'botão' para 'button'
     yesButton.textContent = "Sim";
     yesButton.onclick = () => {
         addMessageToChat("Sim", 'user');
@@ -245,8 +256,8 @@ function showConfirmationBox() {
     otherButton.textContent = "Falar sobre outro assunto";
     otherButton.onclick = () => {
         addMessageToChat("Falar sobre outro assunto", 'user');
-        clearOptions(); 
-        confirmContainer.remove(); 
+        clearOptions(); // Limpa as opções anteriores
+        confirmContainer.remove(); // Remove a caixa de confirmação
         setTimeout(() => {
             addMessageToChat("Faça uma pergunta ou selecione uma categoria abaixo:", 'chatbot');
             showOptions(true); 
@@ -259,35 +270,39 @@ function showConfirmationBox() {
     confirmContainer.appendChild(noButton);
     confirmContainer.appendChild(otherButton);
 
-    const chatContent = document.querySelector('.chat-content'); 
+    const chatContent = document.querySelector('.chat-content'); // Certifique-se de que o seletor está correto
     chatContent.appendChild(confirmContainer);
 }
 
 
 function showFinalConfirmation() {
+    // Cria um elemento para a mensagem final de confirmação
     const confirmationContainer = document.createElement('div');
     confirmationContainer.className = 'final-confirmation';
     confirmationContainer.innerText = "Se precisar de mais ajuda, estamos à disposição!";
-    const chatContainer = document.querySelector('.chat-container'); 
+
+    // Adiciona a mensagem final ao chat
+    const chatContainer = document.querySelector('.chat-container'); // substitua pelo seletor correto da área de chat
     if (chatContainer) {
         chatContainer.appendChild(confirmationContainer);
     }
 
 }
 
+   // Função para lidar com a resposta da confirmação
    function handleConfirmationResponse(success) {
     const confirmationContainer = document.querySelector('.confirmation-container');
-    confirmationContainer.remove(); 
+    confirmationContainer.remove(); // Remove a caixa de confirmação
 
     if (success) {
         setTimeout(() => {
             addMessageToChat("Ótimo! Fico feliz em ter ajudado.", 'chatbot');
-        }, 1000); 
+        }, 1000); // Atraso de 1000 milissegundos (1 segundo)
     } else {
         setTimeout(() => {
             addMessageToChat("Você possui acesso ao seu e-mail de cadastro?", 'chatbot');
             showEmailAccessOptions();
-        }, 1000); 
+        }, 1000); // Atraso de 1000 milissegundos (1 segundo)
     }
     
     
