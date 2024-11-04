@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-pagina2 {
+    font-family: Arial, sans-serif;
+    background-color: #2a3b55;
+    color: #fff;
+    
+}
+
+/* Estilo do cabeçalho da página */
+.header-pagina2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #04142B;
+    width: 100%;
+    height: 80px;
+    padding: 15px 30px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo da logo no cabeçalho */
+.header-pagina2 .logo {
+    flex: 1;
+}
+
+.header-pagina2 .logo img {
+    width: 97px;
+    height: auto;
+    max-height: 80px;
+}
+
+/* Estilo da navegação no centro */
+.header-pagina2 nav {
+    flex: 2;
+    text-align: left;
+}
+
+.header-pagina2 nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+}
+
+.header-pagina2 nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-pagina2 nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do lado direito do cabeçalho */
+.header-right-pagina2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo da carteira e botão de sair */
+.carteira-pagina2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carteira-pagina2 button {
+    background-color: #D9D9D9;
+    color: #0D1B2A;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.carteira-pagina2 img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.sair-pagina2 button {
+    background-color: #F7F7F7;
+    color: #0D1B2A;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .header-pagina2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-pagina2 nav {
+        margin: 10px 0;
+    }
+
+    .header-pagina2 nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-right-pagina2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carteira-pagina2 button,
+    .sair-pagina2 button {
+        width: 100%;
+    }
+}
+
+
+.summary-pagina2 {
+    width: 100%;
+    background-color: #04142B;
+    padding: 15px; /* Reduz o padding para diminuir as caixas */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaço entre as seções */
+}
+
+.summary-info-pagina2 p {
+    margin: 20px 0; /* Espaçamento vertical entre os parágrafos */
+}
+
+.summary-info-pagina2 h3 {
+    margin: 10px 0; /* Espaçamento acima e abaixo do Total Atual */
+}
+
+/* Estilo específico para Rentabilidade, CDI, e Ganho/Mês */
+.summary-info-pagina2 .positive-pagina2 {
+    margin-top: 10px; /* Espaçamento acima */
+}
+
+
+
+
+.positive-pagina2 {
+    color: #00ff00;
+}
+
+
+
+
+.progress-bar-pagina2 {
+    background-color: #ff9c52;
+    height: 20px;
+    border-radius: 5px;
+    text-align: right;
+    padding-right: 5px;
+    color: #fff;
+    margin: 10px 0;
+    line-height: 20px;
+    position: relative;
+}
+
+.line-portfolio{
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -6px; /* Ajusta a posição para alinhar a linha abaixo da barra */
+    left: 0;
+    margin-top: 10px; /* Define o espaço entre a barra e a linha */
+}
+  
+.view-more-pagina2 {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9c52;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.portfolio-item-pagina2 {
+    margin-bottom: 10px;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+.container {
+    display: flex; /* Permite que o main e a sidebar fiquem lado a lado */
+    margin: 20px; /* Margem ao redor do container */
+    justify-content: space-between; /* Para distribuir o espaço entre main e sidebar */
+}
+
+/* Estilo do main */
+.main-pagina2 {
+    display: flex;
+    flex-direction: column; /* Alinha as seções em coluna */
+    align-items: flex-start; /* Alinha as seções à esquerda */
+    margin: 20px;
+    width: 80%; /* Ajusta a largura total */
+    max-width: 700px; /* Define a largura máxima para as caixas */
+}
+
+.sidebar {
+    width: 200px; /* Largura da sidebar */
+    background-color: #313C48;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha centralizado na barra lateral */
+    position: relative; /* Para permitir que fique abaixo da header */
+    gap: 15px; /* Adiciona espaço entre os elementos da sidebar */
+}
+
+/* Ajustes na imagem do rodapé da sidebar */
+.logo-bottom-pagina2 img {
+    display: flex; /* Usado para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Para garantir que o logo use a largura total */
+    margin-top: 20px; /* Distância acima da imagem */
+}
+
+/* Botões da sidebar */
+.sidebar .buttons-pagina2, .learn-more-pagina2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os botões */
+    width: 100%; /* Botões ocupam toda a largura da sidebar */
+}
+
+.buttons-pagina2 button, .learn-more-pagina2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #8C95A1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; /* Ajusta os botões para ocupar a largura completa */
+    text-align: left;
+}
+
+.learn-more-pagina2 {
+    background-color: #00aaff; /* Cor específica para o botão */
+}
+
+/* Ajuste a altura da imagem do usuário */
+.user-greeting img {
+    width: 60px; /* Aumenta a largura da imagem do usuário */
+    height: 60px; /* Aumenta a altura da imagem do usuário */
+    border-radius: 60%;
+    object-fit: cover;
+    border: 3px solid #1B263B;
+    padding: 2px;
+    background-color: #778DA9;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    margin-top: -10px;
+}
+
+.user-greeting {
+    margin-bottom: -15px;
+    display: flex; /* Alinha os elementos na horizontal */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Para que ocupe toda a largura disponível */
+}
+
+
+/* Estilo do texto da saudação */
+.user-greeting p {
+    margin: 0; /* Remove a margem padrão */
+}
+
+.line:first-of-type {
+    margin-bottom: 0; /* Remove a margem inferior da linha acima */
+    margin-top: 0; /* Remove a margem superior da linha acima para deixá-la mais próxima do nome */
+}
+
+.line {
+    height: 2px; /* Espessura da linha */
+    background-color: #fff; /* Cor da linha */
+    width: 100%; /* Largura da linha */
+    margin: 5px auto; /* Centraliza a linha e mantém 5px de margem acima e abaixo */
+}
+
+
+.summary-container {
+    display: flex; /* Usar flexbox para alinhar itens */
+    align-items: flex-start; /* Alinha o texto e o gráfico no topo */
+    justify-content: space-between; /* Espaço entre os elementos */
+    
+}
+
+
+
+#lineChart {
+    width: 100%; /* O gráfico ocupa toda a largura da caixa */
+    height: 80px; /* Ajusta a altura para compactar a caixa */
+    display: flex;
+    align-items: flex-start;
+    margin-top: -70px; /* Aproxima o gráfico do texto acima */
+}
+
+.portfolio-pagina2 {
+    width: 100%;
+    background-color: #04142B;
+    padding: 10px; /* Reduz o padding para compactar a caixa */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Reduz o espaço abaixo da caixa */
+}
+
+
+

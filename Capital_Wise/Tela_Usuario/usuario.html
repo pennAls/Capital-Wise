@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Wise - Minha Carteira</title>
+    <link rel="stylesheet" href="usuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+
+<body class="body-pagina2">
+    <header class="header-pagina2">
+        <div class="logo">
+            <img src="icon_capital_wise.jpeg" alt="Logo Capital Wise">
+        </div>
+        <nav>
+            <ul>
+               
+                <li><a href="index.html">Central de Ajuda</a></li>
+                <li><a href="#investimentos">Investimentos</a></li>
+            </ul>
+        </nav>
+        <div class="header-right-pagina2 ">
+            <div class="carteira-pagina2">
+                <button class="minha-carteira-pagina2">Minha Carteira</button>
+                <imgs src="Icone_usuario.png" alt="Ícone Carteira">
+            </div>
+            <div class="sair-pagina2">
+                <button class="sair-pagina2">Sair</button>
+            </div>
+        </div>
+    </header>
+    
+
+<div class="container">
+    <main class="main-pagina2">
+        <section class="summary-pagina2">
+            <h2>SEU RESUMO</h2>
+            <div class="summary-info-pagina2">
+                <p>Total Atual</p>
+                <h3>R$ 100.000,00</h3>
+                <p>Rentabilidade <span class="positive-pagina2">2,00</span></p>
+                <p>CDI <span class="positive-pagina2">789%</span></p>
+                <p>Ganho/Mês <span class="positive-pagina2">R$ 2.000,00</span></p>
+            </div>
+            <canvas id="summary-chart-pagina2"></canvas>
+            <canvas id="lineChart"></canvas>
+        </section>
+
+        <section class="portfolio-pagina2">
+            <h2>SUA CARTEIRA</h2>
+            <div class="portfolio-item-pagina2">
+                <p>Fundos Imobiliários</p>
+                <div class="progress-bar-pagina2" style="width: 15%;">
+                    15%
+                    <div class="line-portfolio" style="width: 100%;"></div> 
+                </div>
+            </div>
+            <div class="portfolio-item-pagina2">
+                <p>Ações Nacionais</p>
+                <div class="progress-bar-pagina2" style="width: 70%;">
+                    70%
+                    <div class="line-portfolio" style="width: 100%;"></div> 
+                </div>
+            </div>
+            <div class="portfolio-item-pagina2">
+                <p>Ações Internacionais</p>
+                <div class="progress-bar-pagina2" style="width: 50%;">
+                    50%
+                    <div class="line-portfolio" style="width: 100%;"></div> 
+                </div>
+            </div>
+            <div class="portfolio-item-pagina2">
+                <p>Criptomoedas</p>
+                <div class="progress-bar-pagina2" style="width: 20%;">
+                    20%
+                    <div class="line-portfolio" style="width: 100%;"></div> 
+                </div>
+            </div>
+            <button class="view-more-pagina2">Ver mais</button>
+        </section>
+        
+        
+    </main>
+
+    <aside class="sidebar">
+        <div class="line"></div> <!-- Linha acima -->
+        <div class="user-greeting">
+            <img src="imgs/iconcarteira.png" alt="Ícone de usuário"> 
+            <p>Olá Elton</p>
+        </div>
+        <div class="line"></div> <!-- Linha abaixo -->
+        <div class="buttons-pagina2">
+            <button><i class="fas fa-user"></i> Conta</button>
+            <button><i class="fas fa-bell"></i> Notificações</button>
+            <button><i class="fas fa-shield-alt"></i> Segurança</button>
+            <button><i class="fas fa-cog"></i> Configurações</button>
+            <button><i class="fas fa-user-friends"></i> Convidar</button>
+        </div>
+        <button class="learn-more-pagina2">Aprenda a Investir</button>
+        <div class="logo-bottom-pagina2">
+            <img src="iconcw_semfundo.png" alt="Capital Wise">
+        </div>
+    </aside>
+</div>
+
+    <script src="usuario.js"></script>
+</body>
+</html>
