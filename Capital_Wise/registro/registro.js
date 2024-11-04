@@ -145,8 +145,17 @@ class SaveData {
     }
     users.push(userData);
     localStorage.setItem("users", JSON.stringify(users));
+    sessionStorage.setItem("token", generateToken());
     return true;
   }
+}
+
+function generateToken(length = 32) {
+  const array = new Uint8Array(length);
+  window.crypto.getRandomValues(array);
+  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
+    ""
+  );
 }
 
 const form = new Form();

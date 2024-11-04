@@ -28,9 +28,31 @@ document.querySelector("form").addEventListener("submit", (event) => {
   }
 
   if (userExists) {
+    sessionStorage.setItem("token", generateToken());
     window.location.href = "/Capital_Wise/Tela_main/main.html";
   } else {
-    console.log(JSON.parse(localStorage.getItem("users")));
     window.alert("Usuário ou senha incorretos.");
   }
 });
+
+function generateToken(length = 32) {
+  const array = new Uint8Array(length);
+  window.crypto.getRandomValues(array);
+  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
+    ""
+  );
+}
+
+
+const timeOutSession = () => {
+  sessionStorage.clear();
+  window.location.href = "/Capital_Wise/Tela_main/main.html";
+};
+
+let tempoParaTimeout = 10000;
+
+const haveToken = sessionStorage.getItem("token") || false;
+
+if (haveToken) {
+  setTimeout(timeOutSession, tempoParaTimeout);
+}
