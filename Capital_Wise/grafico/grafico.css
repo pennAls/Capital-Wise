@@ -1,0 +1,280 @@
+body {
+    background: #2a3b55;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #04142b;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 104px;
+}
+
+.box_header {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon {
+    height: 100px;
+    width: fit-content;
+}
+
+.link1,
+.link2 {
+    color: white;
+    font-family: Roboto, var(--default-font-family);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link_box {
+    gap: 96px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    padding-left: 96px;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+.button_box {
+    display: flex;
+    gap: 48px;
+    padding-left: 96px;
+}
+
+.sair-buttom {
+    cursor: pointer;
+    border-radius: 48px;
+    width: 140px;
+    font-family: Roboto, var(--default-font-family);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5rem;
+    border: none;
+}
+
+.wallet {
+    display: flex;
+    flex-direction: row;
+}
+
+.people {
+    width: 80px;
+    position: relative;
+    right: 15%;
+}
+
+.wallet-buttom {
+    cursor: pointer;
+    padding-left: 36px !important;
+    border-radius: 48px;
+    align-items: center;
+    display: flex;
+    width: 400px;
+    font-family: Roboto, var(--default-font-family);
+    font-size: 1.25rem;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.5rem;
+    border: none;
+    
+}
+
+.sair-buttom {
+    color: #04142b;
+    padding: 16px;
+    background-color: white;
+}
+
+.sair-buttom:hover {
+    color: white;
+    background-color: #0051a7;
+    cursor: pointer;
+}
+
+.wallet-buttom {
+    color: #04142b;
+    padding: 16px;
+    background-color: #d9d9d9;
+}
+
+.wallet-buttom:hover {
+    background-color: white;
+    color: #0051a7;
+}
+
+hr {
+    border: none;
+    border-top: 4px solid #04142b;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    gap: 10px;
+    font-family: 'Orelega One', cursive; 
+}
+
+.titulo {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.caixa-esquerda {
+    width: 150px;
+    height: 100px;
+    background-color: #04142B;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+}
+
+
+.caixa-centro {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: #04142B;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.caixa-centro p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+
+.caixa-direita {
+    width: 450px;
+    height: 220px;
+    background-color: #04142B;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.caixa-vender {
+    width: 150px;
+    height: 50px;
+    background-color: #d9534f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.valor-laranja{
+    color: #ff5e00;
+}
+.valor-verde{
+    color: #08D604;
+}
+
+
+#lineChart {
+    width: 100%; 
+    height: 100%; 
+}
+.titulo-direita {
+    margin-bottom: 8px; 
+    font-size: 1rem;
+}
+.caixa-grande {
+    width: 100%;
+    max-width: 1100px; 
+    height: 650px;
+    background-color: #04142B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.caixa-grande img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+footer {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+}
+
+.caixa-voltar {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.caixa-voltar:hover {
+  background-color: #f0f0f0;
+  color: #6dc2ff;
+}
+
+.caixa-voltar::before {
+  content: "← ";
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
