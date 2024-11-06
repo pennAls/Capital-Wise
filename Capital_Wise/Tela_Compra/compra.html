@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Wise</title>
+    <link rel="stylesheet" href="compra.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="icon_capital_wise.jpeg" alt="Logo Capital Wise">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#central-ajuda">Central de Ajuda</a></li>
+                <li><a href="#investimentos">Investimentos</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="carteira">
+                <a href="usuario.html" target="_self"> 
+                <button class="minha-carteira">Minha Carteira</button>
+            </a> 
+                <img src="../imgs/Icone_usuario.png" alt="Ícone Carteira">
+            </div>
+            <div class="sair">
+                <button class="sair">Sair</button>
+            </div>
+        </div>
+    </header>
+   <section class="main-content">
+    <div class="menu">
+        <button class="menu-item">
+            <img src="../imgs/moedas.png" alt="Ícone de Bitcoin">
+            <span>Criptomoedas</span>
+        </button>
+        <button class="menu-item">
+            <img src="../imgs/internacionais.png" alt="Ícone de Ações Internacionais">
+            <span>Ações Internacionais</span>
+        </button>
+        <button class="menu-item">
+            <img src="../imgs/nacionais.png" alt="Ícone de Ações Nacionais">
+            <span>Ações Nacionais</span>
+        </button>
+        <button class="menu-item">
+            <img src="../imgs/fundos.png" alt="Ícone de Fundos Imobiliários">
+            <span>Fundos Imobiliários</span>
+        </button>
+    </div>
+    <div class="wallet-summary">
+        <button class="investment-summary">
+            <div class="investment-content">
+                <div class="icon-text-container">
+                    <img src="../imgs/circular-economy.png" alt="Meus investimentos">
+                    <div class="text-container">
+                        <span class="title">Meus Investimentos</span>
+                    </div>
+                </div>
+                <div class="amount-container">
+                    <p class="amount" id="investment-amount">R$ 17.545,24</p>
+                    <img src="../imgs/olho.png" alt="Mostrar/Esconder" class="toggle-visibility" onclick="toggleVisibility('investment-amount', this)">
+                </div>
+            </div>
+            <div class="percentage-indicator">+1.54%</div> 
+        </button>
+
+        <button class="sell-button">Vender</button>
+
+        <button class="portfolio-summary">
+            <div class="portfolio-content">
+                <div class="icon-text-container">
+                    <img src="../imgs/icons8-carteira-64.png" alt="Minha Carteira">
+                    <div class="text-container">
+                        <span class="title">Minha Carteira</span>
+                    </div>
+                </div>
+                <div class="amount-container">
+                    <p class="amount" id="portfolio-amount">R$ 100,42</p>
+                    <img src="../imgs/olho.png" alt="Mostrar/Esconder" class="toggle-visibility" onclick="toggleVisibility('portfolio-amount', this)">
+                </div>
+            </div>
+        </button>
+    </div>
+        </button>
+    </div>  
+  </div>
+</section>
+<section>
+    <div class="crypto-list">
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/BTC-removebg-preview.png" alt="BTC Icon" class="crypto-icon">
+                3.5290020 BTC
+            </span>
+            <span class="crypto-value">$5,441</span>
+            <span class="crypto-price">$157.154</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage positive">+1.54%</span>
+        </div>
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/BTC-removebg-preview.png" alt="BTC Icon" class="crypto-icon">
+                3.5290020 BTC
+            </span>
+            <span class="crypto-value">$5,441</span>
+            <span class="crypto-price">$157.154</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage positive">+1.54%</span>
+        </div>
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/ETH.png" alt="BTC Icon" class="crypto-icon">
+                0.3290020 ETH
+            </span>
+            <span class="crypto-value">$3,441</span>
+            <span class="crypto-price">$120.345</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage negative">-3.54%</span>
+        </div>
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/ETH.png" alt="BTC Icon" class="crypto-icon">
+                0.3290020 ETH
+            </span>
+            <span class="crypto-value">$3,441</span>
+            <span class="crypto-price">$120.345</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage negative">-3.54%</span>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="crypto-list">
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/UNIFIGMA.png" alt="BTC Icon" class="crypto-icon">
+                0.3290020 UNI
+            </span>
+            <span class="crypto-value">$3,441</span>
+            <span class="crypto-price">$23.345</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage positive">+7.54%</span>
+        </div>
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/UNIFIGMA.png" alt="BTC Icon" class="crypto-icon">
+                0.3290020 UNI
+            </span>
+            <span class="crypto-value">$3,441</span>
+            <span class="crypto-price">$23.345</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage positive">+7.54%</span>
+        </div>
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/EUAS.png" alt="BTC Icon" class="crypto-icon">
+                0.3290020 UST
+            </span>
+            <span class="crypto-value">$3,441</span>
+            <span class="crypto-price">$120.345</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage negative">-24.54%</span>
+        </div>
+        <div class="crypto-item">
+            <span class="crypto-amount">
+                <img src="../imgs/EUAS.png" alt="BTC Icon" class="crypto-icon">
+                0.3290020 UST
+            </span>
+            <span class="crypto-value">$3,441</span>
+            <span class="crypto-price">$120.345</span>
+            <button class="buy-button">Comprar</button>
+            <span class="percentage negative">-24.54%</span>
+        </div>
+    </div>
+</section>
+            </div>
+            <div class="container">
+            </div>
+        </section>
+    </div>
+
+    <script src="compra.js"></script>
+</body>
+</html>
