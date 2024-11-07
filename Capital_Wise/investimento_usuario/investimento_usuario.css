@@ -1,248 +1,307 @@
 body {
-    background: #0e1e2e;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0; 
+  background: #0e1e2e;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    margin-bottom: 64px;
-    z-index: 10;
-    width: 100%;
-    background-color: #566E92;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    height: 104px;
-  }
-  
-  .box_header {
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-  }
-  .icon {
-    height: 100px;
-    width: fit-content;
-  }
-  
-  .link1,
-  .link2 {
-    color: white;
-    font-family: Roboto, var(--default-font-family);
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .link_box {
-    gap: 96px;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    display: flex;
-    padding-left: 96px;
-  }
-  
-  a:hover {
-    color: #04142b
-  }
-  
-  .button_box {
-    display: flex;
-    gap: 48px;
-    padding-left: 96px;
-  }
-  
-  .sair-buttom {
-    cursor: pointer;
-    border-radius: 48px;
-    width: 140px;
-    font-family: Roboto, var(--default-font-family);
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 0.5rem;
-    border: none;
-  }
-  
-  .wallet{
-      display: flex;
-      flex-direction: row;
-  }
-  
-  .people{
-      width: 80px;
-      position: relative;
-      right: 15%;
-  }
-  
-  .wallet-buttom {
-    cursor: pointer;
-    padding-left: 36px !important;
-    border-radius: 48px;
-    align-items: center;
-    display: flex;
-    width: 400px;
-    font-family: Roboto, var(--default-font-family);
-    font-size: 1rem;
-    overflow: hidden; 
-    text-align: center;
-    font-weight: 700;
-    text-align: left;
-    padding: 0.5rem;
-    border: none;
-  }
-  
-  .sair-buttom {
-    color: #04142b;
-    padding: 16px;
-    background-color: white;
-  }
-  
-  .sair-buttom:hover {
-    color: white;
-    background-color: #04142b;
-    cursor: pointer;
-  }
-  
-  .wallet-buttom {
-    color: #04142b;
-    padding: 16px;
-    background-color: #d9d9d9;
-  }
-  
-  .wallet-buttom:hover {
-    background-color: white;
-    color: #0051a7;
-  }
-  
-  hr {
-    border: none;
-    border-top: 4px solid #04142b;
-  }
+  position: sticky;
+  top: 0;
+  margin-bottom: 64px;
+  z-index: 10;
+  width: 100%;
+  background-color: #566E92;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  height: 104px;
+}
+
+.box_header {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  height: 100px;
+  width: fit-content;
+}
+
+.link1,
+.link2 {
+  color: white;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link_box {
+  gap: 96px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding-left: 96px;
+}
+
+a:hover {
+  color: #04142b
+}
+
+.button_box {
+  display: flex;
+  gap: 48px;
+  padding-left: 96px;
+}
+
+.sair-buttom {
+  cursor: pointer;
+  border-radius: 48px;
+  width: 140px;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  border: none;
+}
+
+.wallet {
+  display: flex;
+  flex-direction: row;
+}
+
+.people {
+  width: 80px;
+  position: relative;
+  right: 15%;
+}
+
+.wallet-buttom {
+  cursor: pointer;
+  padding-left: 36px !important;
+  border-radius: 48px;
+  align-items: center;
+  display: flex;
+  width: 400px;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 1rem;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.5rem;
+  border: none;
+}
+
+.sair-buttom {
+  color: #04142b;
+  padding: 16px;
+  background-color: white;
+}
+
+.sair-buttom:hover {
+  color: white;
+  background-color: #04142b;
+  cursor: pointer;
+}
+
+.wallet-buttom {
+  color: #04142b;
+  padding: 16px;
+  background-color: #d9d9d9;
+}
+
+.wallet-buttom:hover {
+  background-color: white;
+  color: #0051a7;
+}
+
+hr {
+  border: none;
+  border-top: 4px solid #04142b;
+}
 
 
 
 .centra-investimento {
-    font-size: 1.3em;
-    color: white;
-    text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
 }
+
 .centra-investimento:hover {
-    color: #c2c2c2;
+  color: #c2c2c2;
 }
+
 .caixinha {
-    background-color: white;
-    color: black;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
 }
+
 .caixinha:hover {
-    background-color: #fbfbfb;
-    color: #6DC2FF;
+  background-color: #fbfbfb;
+  color: #6DC2FF;
 }
+
 .grafico-container {
-    display: flex;
-    align-items: center;
-    margin: 30px 0;
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
 }
+
 .grafico-pizza {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background: conic-gradient(
-        #6DC2FF 0% 25%,   
-        #8BFF6D 25% 50%,  
-        #FFAC60 50% 75%,  
-        #FF6060 75% 100%  
-    );
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: conic-gradient(#6DC2FF 0% 25%,
+      #8BFF6D 25% 50%,
+      #FFAC60 50% 75%,
+      #FF6060 75% 100%);
 }
+
 .caixas-grafico {
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
 }
+
 .caixa {
-    width: 130px;
-    height: 60px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
+  width: 130px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
 }
-.azul { background-color: #6DC2FF; }
-.verde { background-color: #8BFF6D; }
-.laranja { background-color: #FFAC60; }
-.vermelho { background-color: #FF6060; }
+
+.azul {
+  background-color: #6DC2FF;
+}
+
+.verde {
+  background-color: #8BFF6D;
+}
+
+.laranja {
+  background-color: #FFAC60;
+}
+
+.vermelho {
+  background-color: #FF6060;
+}
+
 .tabela-acoes {
-    width: 80%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    background-color: #0e1e2e; 
-    border: 2px solid #415A77; 
+  width: 80%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #0e1e2e;
+  border: 2px solid #415A77;
 }
-.tabela-acoes th, .tabela-acoes td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #415A77; 
+
+.tabela-acoes th,
+.tabela-acoes td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #415A77;
 }
+
 .titulo-acoes {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.1em;
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.1em;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
 }
-footer {
-    position: fixed;
-    bottom: 30px;
-    left: 20px;
-}
+
 .caixa-voltar {
-    background-color: white;
-    color: black;
-    padding: 10px 15px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    text-decoration: none;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
 }
+
 .caixa-voltar:hover {
-    background-color: #f0f0f0;
-    color: #6DC2FF;
+  background-color: #f0f0f0;
+  color: #6DC2FF;
 }
+
 .caixa-voltar::before {
-    content: '← ';
-    font-size: 1.2em;
-    margin-right: 5px;
+  content: '← ';
+  font-size: 1.2em;
+  margin-right: 5px;
 }
+
 .conteiner {
   display: flex;
   align-items: center;
-    
+
 }
+
 .imagem {
-    margin-right: 20px; 
-    width: 25px;
-    height: 25px;
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
 }
-.numero-vermelho{color:red}
-.numero-verde{color:#08D604;}
+
+.numero-vermelho {
+  color: red
+}
+
+.numero-verde {
+  color: #08D604;
+}
+
+footer {
+  width: 100%;
+  background-color: #566E92;
+  display: flex;
+  margin-top: auto;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.footer_text {
+  color: #ffffff;
+  font-family: Nunito, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.social_icons {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.social {
+  width: 50px;
+}

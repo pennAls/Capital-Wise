@@ -1,191 +1,247 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capital Wise</title>
-    <link rel="stylesheet" href="compra.css">
-</head>
-<body>
+    <link rel="stylesheet" href="compra.css" />
+  </head>
+  <body>
     <header>
-        <div class="box_header">
-          <figure>
+      <div class="box_header">
+        <figure>
+          <img
+            class="icon"
+            src="/Capital_Wise/imgs/logo.jpg"
+            alt="Logomarca da empresa"
+          />
+        </figure>
+        <div class="link_box">
+          <a class="link1" href="/Capital_Wise/Suporte/suporte.html"
+            >Central de Ajuda</a
+          >
+          <a class="link2" href="#">Investimentos</a>
+        </div>
+        <div class="button_box">
+          <div class="wallet">
+            <button class="wallet-buttom"></button>
             <img
-              class="icon"
-              src="/Capital_Wise/imgs/logo.jpg"
-              alt="Logomarca da empresa"
+              class="people"
+              src="/Capital_Wise/imgs/people_icon1.png"
+              alt=""
             />
-          </figure>
-          <div class="link_box">
-            <a class="link1" href="/Capital_Wise/Suporte/suporte.html">Central de Ajuda</a>
-            <a class="link2" href="#">Investimentos</a>
           </div>
-          <div class="button_box">
-            <div class="wallet">
-              <button class="wallet-buttom"></button>
-              <img
-                class="people"
-                src="/Capital_Wise/imgs/people_icon1.png"
-                alt=""
-              />
-            </div>
-            <div style="margin: auto;">
-              <button class="sair-buttom">Sair</button>
-            </div>   
+          <div style="margin: auto">
+            <button class="sair-buttom">Sair</button>
           </div>
         </div>
-      </header>
-   <section class="main-content">
-    <div class="menu">
+      </div>
+    </header>
+
+    <section class="main-content">
+      <div class="menu">
         <button class="menu-item">
-            <img src="../imgs/moedas.png" alt="Ícone de Bitcoin">
-            <span>Criptomoedas</span>
+          <img src="../imgs/moedas.png" alt="Ícone de Bitcoin" />
+          <span>Criptomoedas</span>
         </button>
         <button class="menu-item">
-            <img src="../imgs/internacionais.png" alt="Ícone de Ações Internacionais">
-            <span>Ações Internacionais</span>
+          <img
+            src="../imgs/internacionais.png"
+            alt="Ícone de Ações Internacionais"
+          />
+          <span>Ações Internacionais</span>
         </button>
         <button class="menu-item">
-            <img src="../imgs/nacionais.png" alt="Ícone de Ações Nacionais">
-            <span>Ações Nacionais</span>
+          <img src="../imgs/nacionais.png" alt="Ícone de Ações Nacionais" />
+          <span>Ações Nacionais</span>
         </button>
         <button class="menu-item">
-            <img src="../imgs/fundos.png" alt="Ícone de Fundos Imobiliários">
-            <span>Fundos Imobiliários</span>
+          <img src="../imgs/fundos.png" alt="Ícone de Fundos Imobiliários" />
+          <span>Fundos Imobiliários</span>
         </button>
-    </div>
-    <div class="wallet-summary">
+      </div>
+      <div class="wallet-summary">
         <button class="investment-summary">
-            <div class="investment-content">
-                <div class="icon-text-container">
-                    <img src="../imgs/circular-economy.png" alt="Meus investimentos">
-                    <div class="text-container">
-                        <span class="title">Meus Investimentos</span>
-                    </div>
-                </div>
-                <div class="amount-container">
-                    <p class="amount" id="investment-amount">R$ 17.545,24</p>
-                    <img src="../imgs/olho.png" alt="Mostrar/Esconder" class="toggle-visibility" onclick="toggleVisibility('investment-amount', this)">
-                </div>
+          <div class="investment-content">
+            <div class="icon-text-container">
+              <img
+                src="../imgs/circular-economy.png"
+                alt="Meus investimentos"
+              />
+              <div class="text-container">
+                <span class="title">Meus Investimentos</span>
+              </div>
             </div>
-            <div class="percentage-indicator">+1.54%</div> 
+            <div class="amount-container">
+              <p class="amount" id="investment-amount">R$ 17.545,24</p>
+              <img
+                src="../imgs/olho.png"
+                alt="Mostrar/Esconder"
+                class="toggle-visibility"
+                onclick="toggleVisibility('investment-amount', this)"
+              />
+            </div>
+          </div>
+          <div class="percentage-indicator">+1.54%</div>
         </button>
 
         <button class="sell-button">Vender</button>
 
         <button class="portfolio-summary">
-            <div class="portfolio-content">
-                <div class="icon-text-container">
-                    <img src="../imgs/icons8-carteira-64.png" alt="Minha Carteira">
-                    <div class="text-container">
-                        <span class="title">Minha Carteira</span>
-                    </div>
-                </div>
-                <div class="amount-container">
-                    <p class="amount" id="portfolio-amount">R$ 100,42</p>
-                    <img src="../imgs/olho.png" alt="Mostrar/Esconder" class="toggle-visibility" onclick="toggleVisibility('portfolio-amount', this)">
-                </div>
+          <div class="portfolio-content">
+            <div class="icon-text-container">
+              <img src="../imgs/icons8-carteira-64.png" alt="Minha Carteira" />
+              <div class="text-container">
+                <span class="title">Minha Carteira</span>
+              </div>
             </div>
+            <div class="amount-container">
+              <p class="amount" id="portfolio-amount">R$ 100,42</p>
+              <img
+                src="../imgs/olho.png"
+                alt="Mostrar/Esconder"
+                class="toggle-visibility"
+                onclick="toggleVisibility('portfolio-amount', this)"
+              />
+            </div>
+          </div>
         </button>
-    </div>
-        </button>
-    </div>  
-  </div>
-</section>
-<section>
-    <div class="crypto-list">
+      </div>
+    </section>
+
+    <section>
+      <div class="crypto-list">
         <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/BTC-removebg-preview.png" alt="BTC Icon" class="crypto-icon">
-                3.5290020 BTC
-            </span>
-            <span class="crypto-value">$5,441</span>
-            <span class="crypto-price">$157.154</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage positive">+1.54%</span>
+          <span class="crypto-amount">
+            <img
+              src="../imgs/BTC-removebg-preview.png"
+              alt="BTC Icon"
+              class="crypto-icon"
+            />
+            3.5290020 BTC
+          </span>
+          <span class="crypto-value">$5,441</span>
+          <span class="crypto-price">$157.154</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage positive">+1.54%</span>
         </div>
         <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/BTC-removebg-preview.png" alt="BTC Icon" class="crypto-icon">
-                3.5290020 BTC
-            </span>
-            <span class="crypto-value">$5,441</span>
-            <span class="crypto-price">$157.154</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage positive">+1.54%</span>
+          <span class="crypto-amount">
+            <img
+              src="../imgs/BTC-removebg-preview.png"
+              alt="BTC Icon"
+              class="crypto-icon"
+            />
+            3.5290020 BTC
+          </span>
+          <span class="crypto-value">$5,441</span>
+          <span class="crypto-price">$157.154</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage positive">+1.54%</span>
         </div>
         <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/ETH.png" alt="BTC Icon" class="crypto-icon">
-                0.3290020 ETH
-            </span>
-            <span class="crypto-value">$3,441</span>
-            <span class="crypto-price">$120.345</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage negative">-3.54%</span>
+          <span class="crypto-amount">
+            <img src="../imgs/ETH.png" alt="BTC Icon" class="crypto-icon" />
+            0.3290020 ETH
+          </span>
+          <span class="crypto-value">$3,441</span>
+          <span class="crypto-price">$120.345</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage negative">-3.54%</span>
         </div>
         <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/ETH.png" alt="BTC Icon" class="crypto-icon">
-                0.3290020 ETH
-            </span>
-            <span class="crypto-value">$3,441</span>
-            <span class="crypto-price">$120.345</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage negative">-3.54%</span>
+          <span class="crypto-amount">
+            <img src="../imgs/ETH.png" alt="BTC Icon" class="crypto-icon" />
+            0.3290020 ETH
+          </span>
+          <span class="crypto-value">$3,441</span>
+          <span class="crypto-price">$120.345</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage negative">-3.54%</span>
         </div>
-    </div>
-</section>
-<section>
-    <div class="crypto-list">
+      </div>
+    </section>
+
+    <section>
+      <div class="crypto-list">
         <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/UNIFIGMA.png" alt="BTC Icon" class="crypto-icon">
-                0.3290020 UNI
-            </span>
-            <span class="crypto-value">$3,441</span>
-            <span class="crypto-price">$23.345</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage positive">+7.54%</span>
-        </div>
-        <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/UNIFIGMA.png" alt="BTC Icon" class="crypto-icon">
-                0.3290020 UNI
-            </span>
-            <span class="crypto-value">$3,441</span>
-            <span class="crypto-price">$23.345</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage positive">+7.54%</span>
+          <span class="crypto-amount">
+            <img
+              src="../imgs/UNIFIGMA.png"
+              alt="UNI Icon"
+              class="crypto-icon"
+            />
+            0.3290020 UNI
+          </span>
+          <span class="crypto-value">$3,441</span>
+          <span class="crypto-price">$23.345</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage positive">+7.54%</span>
         </div>
         <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/EUAS.png" alt="BTC Icon" class="crypto-icon">
-                0.3290020 UST
-            </span>
-            <span class="crypto-value">$3,441</span>
-            <span class="crypto-price">$120.345</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage negative">-24.54%</span>
+          <span class="crypto-amount">
+            <img
+              src="../imgs/UNIFIGMA.png"
+              alt="UNI Icon"
+              class="crypto-icon"
+            />
+            0.3290020 UNI
+          </span>
+          <span class="crypto-value">$3,441</span>
+          <span class="crypto-price">$23.345</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage positive">+7.54%</span>
         </div>
         <div class="crypto-item">
-            <span class="crypto-amount">
-                <img src="../imgs/EUAS.png" alt="BTC Icon" class="crypto-icon">
-                0.3290020 UST
-            </span>
-            <span class="crypto-value">$3,441</span>
-            <span class="crypto-price">$120.345</span>
-            <button class="buy-button">Comprar</button>
-            <span class="percentage negative">-24.54%</span>
+          <span class="crypto-amount">
+            <img src="../imgs/EUAS.png" alt="UST Icon" class="crypto-icon" />
+            0.3290020 UST
+          </span>
+          <span class="crypto-value">$3,441</span>
+          <span class="crypto-price">$120.345</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage negative">-24.54%</span>
         </div>
-    </div>
-</section>
-            </div>
-            <div class="container">
-            </div>
-        </section>
-    </div>
+        <div class="crypto-item">
+          <span class="crypto-amount">
+            <img src="../imgs/EUAS.png" alt="UST Icon" class="crypto-icon" />
+            0.3290020 UST
+          </span>
+          <span class="crypto-value">$3,441</span>
+          <span class="crypto-price">$120.345</span>
+          <button class="buy-button">Comprar</button>
+          <span class="percentage negative">-24.54%</span>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <figure>
+        <img
+          style="width: 100px"
+          src="/Capital_Wise/imgs/logo_transparente.png"
+          alt="Logomarca da empresa"
+        />
+      </figure>
+      <p class="footer_text">@CapitalWise - Todos os direitos reservados</p>
+      <figure class="social_icons">
+        <img
+          class="social"
+          src="/Capital_Wise/imgs/whatsapp 1.png"
+          alt="Whatsapp Ícone"
+        />
+        <img
+          class="social"
+          src="/Capital_Wise/imgs/instagram 1.png"
+          alt="Instagram Ícone"
+        />
+        <img
+          class="social"
+          src="/Capital_Wise/imgs/linkedin (1) 1.png"
+          alt="linkedin Ícone"
+        />
+      </figure>
+    </footer>
 
     <script src="compra.js"></script>
-</body>
+  </body>
 </html>

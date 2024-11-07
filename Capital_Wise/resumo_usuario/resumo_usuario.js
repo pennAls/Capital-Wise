@@ -15,12 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
     navigateToMain() {
       window.location.href = "/Capital_Wise/Tela_main/main.html";
     }
-    navigateToLogged() {}
+    navigateToUserScreen() {
+      window.location.href = "/Capital_Wise/Tela_Usuario/usuario.html";
+    }
   }
 
   const navigate = new Navigation();
 
   const sairButton = document.getElementsByClassName("sair-buttom")[0];
+  userButton.addEventListener("click", () => navigate.navigateToUserScreen());
 
   sairButton.addEventListener("click", () => navigate.navigateToMain());
 });
