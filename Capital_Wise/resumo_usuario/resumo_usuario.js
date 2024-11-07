@@ -30,7 +30,7 @@ const timeOutSession = () => {
   window.location.href = "/Capital_Wise/Tela_main/main.html";
 };
 
-let tempoParaTimeout = 10000;
+let tempoParaTimeout = 100000;
 
 const haveToken = sessionStorage.getItem("token") || false;
 
