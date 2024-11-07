@@ -29,6 +29,7 @@ header {
   flex-direction: row;
   align-items: center;
 }
+
 .icon {
   height: 100px;
   width: fit-content;
@@ -74,15 +75,15 @@ a:hover {
   border: none;
 }
 
-.wallet{
-    display: flex;
-    flex-direction: row;
+.wallet {
+  display: flex;
+  flex-direction: row;
 }
 
-.people{
-    width: 80px;
-    position: relative;
-    right: 15%;
+.people {
+  width: 80px;
+  position: relative;
+  right: 15%;
 }
 
 .wallet-buttom {
@@ -94,7 +95,8 @@ a:hover {
   width: 400px;
   font-family: Roboto, var(--default-font-family);
   font-size: 1rem;
-  overflow: hidden; /* Oculta qualquer texto que ultrapasse */
+  overflow: hidden;
+  /* Oculta qualquer texto que ultrapasse */
   text-align: center;
   font-weight: 700;
   text-align: left;
@@ -212,12 +214,10 @@ content {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: conic-gradient(
-    #ca0606 0% 25%,
-    #000000 25% 50%,
-    #ffae17 50% 75%,
-    #21a6df 75% 100%
-  );
+  background: conic-gradient(#ca0606 0% 25%,
+      #000000 25% 50%,
+      #ffae17 50% 75%,
+      #21a6df 75% 100%);
 }
 
 .total-atual {

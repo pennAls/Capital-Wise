@@ -32,7 +32,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
     for (const user of users) {
       sessionStorage.setItem("loggedInUserEmail",user.email);
     }
-    window.location.href = "/Capital_Wise/resumo_usuario/resumo_usuario.html";
+    window.location.href = "/Capital_Wise/Tela_Usuario/usuario.html";
   } else {
     window.alert("Usuário ou senha incorretos.");
   }

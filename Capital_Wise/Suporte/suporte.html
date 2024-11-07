@@ -1,159 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Central de Ajuda</title>
-    <link rel="stylesheet" href="suporte.css">
-    
-</head>
+    <link rel="stylesheet" href="suporte.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <img src="../imgs/icon_capital_wise.jpeg" alt="Logo Capital Wise">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#central-ajuda">Central de Ajuda</a></li>
-                <li><a href="#investimentos">Investimentos</a></li>
-            </ul>
-        </nav>
-        <div class="header-right">
-                <div class="carteira">
-                    <a href="../usuario/usuario.html" target="_self"> 
-                        <button class="minha-carteira">Minha Carteira</button>
-                    </a>
-                    <img src="../imgs/Icone_usuario.png" alt="Ícone Carteira">
-                </div>
-            
-            <div class="sair">
-                <button class="sair">Sair</button>
+        <div class="box_header">
+          <figure>
+            <img
+              class="icon"
+              src="/Capital_Wise/imgs/logo.jpg"
+              alt="Logomarca da empresa"
+            />
+          </figure>
+          <div class="link_box">
+            <a class="link1" href="/Capital_Wise/Suporte/suporte.html">Central de Ajuda</a>
+            <a class="link2" href="/Capital_Wise/Tela_Compra/compra.html">Investimentos</a>
+          </div>
+          <div class="button_box">
+            <div class="wallet">
+              <button class="wallet-buttom"></button>
+              <img
+                class="people"
+                src="/Capital_Wise/imgs/people_icon1.png"
+                alt=""
+              />
             </div>
+            <div style="margin: auto;">
+              <button class="sair-buttom">Sair</button>
+            </div>   
+          </div>
         </div>
-    </header>
+      </header>
 
     <main>
-        <section class="help-section">
-            <h1>Como podemos te ajudar?</h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisa">
-                <button>Pesquisar</button>
-            </div>
-        </section>
+      <section class="help-section">
+        <h1>Como podemos te ajudar?</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Pesquisa" />
+          <button>Pesquisar</button>
+        </div>
+      </section>
 
-        <!-- Botão do Chat -->
-        <button class="chat-button" onclick="toggleChat()">💬 Chat</button>
+      <!-- Botão do Chat -->
+      <button class="chat-button" onclick="toggleChat()">💬 Chat</button>
 
-
-        <!-- Janela do Chat -->
-        <div class="chat-box" id="chatBox">
-            <div class="chat-header">
-                <div class="chat-header-left">
-                    <button class="menu-button">⋮</button>
-                    <img src="../imgs/icon_capital_wise.jpeg" alt="Logo Capital Wise" class="chat-logo">
-                    <span class="chat-title">Capital Wise</span>
-                </div>
-                <div class="chat-controls">
-                    <button class="minimize-button">—</button>
-                    <button class="close-button">X</button>
-                </div>
-            </div>
-
-
-
-            <div class="chat-content" id="chatContent">
-            </div>
-
-            <!-- Campo de mensagem -->
-            <div id="messageContainer" style="display:none;">
-                <input type="text" class="chat-input" placeholder="Mensagem...">
-               
-            </div>
+      <!-- Janela do Chat -->
+      <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+          <div class="chat-header-left">
+            <button class="menu-button">⋮</button>
+            <img
+              src="../imgs/icon_capital_wise.jpeg"
+              alt="Logo Capital Wise"
+              class="chat-logo"
+            />
+            <span class="chat-title">Capital Wise</span>
+          </div>
+          <div class="chat-controls">
+            <button class="minimize-button">—</button>
+            <button class="close-button">X</button>
+          </div>
         </div>
 
+        <div class="chat-content" id="chatContent"></div>
 
-
-        <div class="confirmation-box" id="confirmationBox" style="display: none;">
-            <p style="font-weight: bold;">Fim de bate-papo</p>
-            <p>Tem certeza de que quer terminar o bate-papo?</p>
-            <button class="end-chat-button" onclick="endChat()">Fim do bate-papo</button>
-            <button class="cancel-button" onclick="cancelClose()">Cancelar</button>
+        <!-- Campo de mensagem -->
+        <div id="messageContainer" style="display: none">
+          <input type="text" class="chat-input" placeholder="Mensagem..." />
         </div>
+      </div>
 
+      <div class="confirmation-box" id="confirmationBox" style="display: none">
+        <p style="font-weight: bold">Fim de bate-papo</p>
+        <p>Tem certeza de que quer terminar o bate-papo?</p>
+        <button class="end-chat-button" onclick="endChat()">
+          Fim do bate-papo
+        </button>
+        <button class="cancel-button" onclick="cancelClose()">Cancelar</button>
+      </div>
 
+      <section class="faq-overview">
+        <h2>Dúvidas Frequentes</h2>
+        <div class="faq-links">
+          <a href="#" class="all-faqs-link">Todas as dúvidas frequentes →</a>
+        </div>
+      </section>
 
-        <section class="faq-overview">
-            <h2>Dúvidas Frequentes</h2>
-            <div class="faq-links">
-                <a href="#" class="all-faqs-link">Todas as dúvidas frequentes →</a>
+      <section class="faq-section">
+        <div class="faq-categories">
+          <div class="faq-item">
+            <h3>Conta e Login</h3>
+            <div class="faq-questions">
+              <p>
+                <a href="pagina1.html">Como crio uma conta na Capital Wise?</a>
+              </p>
+              <p>
+                <a href="pagina2.html"
+                  >O que fazer se eu esquecer minha senha?</a
+                >
+              </p>
+              <p>
+                <a href="pagina3.html"
+                  >Como faço a autenticação em duas etapas?</a
+                >
+              </p>
+              <p>
+                <a href="pagina4.html">Como atualizo meus dados pessoais?</a>
+              </p>
             </div>
-        </section>
-
-
-        <section class="faq-section">
-            <div class="faq-categories">
-                <div class="faq-item">
-                    <h3>Conta e Login</h3>
-                    <div class="faq-questions">
-                        <p><a href="pagina1.html">Como crio uma conta na Capital Wise?</a></p>
-                        <p><a href="pagina2.html">O que fazer se eu esquecer minha senha?</a></p>
-                        <p><a href="pagina3.html">Como faço a autenticação em duas etapas?</a></p>
-                        <p><a href="pagina4.html">Como atualizo meus dados pessoais?</a></p>
-                    </div>
-                    <a href="conta_e_login.html" class="read-more">Ler mais →</a>
-                </div>
-                <div class="faq-item">
-                    <h3>Investimentos e Carteiras</h3>
-                    <div class="faq-questions">
-                        <p><a href="pagina5.html">Como faço investimentos em criptomoedas, ativos fixos e variáveis, e
-                                fundos imobiliários?</a></p>
-                        <p><a href="pagina6.html">Quais são as opções de carteira digital e física disponíveis?</a></p>
-                        <p><a href="pagina7.html">Como visualizo e interpreto os gráficos de investimento?</a></p>
-                    </div>
-                    <a href="investimentos_e_carteiras.html" class="read-more">Ler mais →</a>
-                </div>
-                <div class="faq-item">
-                    <h3>Suporte ao Cliente</h3>
-                    <div class="faq-questions">
-                        <p><a href="pagina8.html">Como posso entrar em contato com o suporte ao cliente?</a></p>
-                        <p><a href="pagina9.html">O que fazer se eu tiver um problema técnico ou uma dúvida
-                                específica?</a></p>
-                        <p><a href="pagina10.html">Qual é o horário de atendimento do suporte ao cliente?</a></p>
-                    </div>
-                    <a href="suporte_ao_cliente.html" class="read-more">Ler mais →</a>
-                </div>
-                <div class="faq-item">
-                    <h3>Saldo e Transações</h3>
-                    <div class="faq-questions">
-                        <p><a href="pagina11.html">Como crio uma conta na Capital Wise?</a></p>
-                        <p><a href="pagina12.html">O que fazer se eu esquecer minha senha?</a></p>
-                        <p><a href="pagina13.html">Como faço a autenticação em duas etapas?</a></p>
-                        <p><a href="pagina14.html">Como atualizo meus dados pessoais?</a></p>
-                    </div>
-                    <a href="saldo_e_transacoes.html" class="read-more">Ler mais →</a>
-                </div>
-                <div class="faq-item">
-                    <h3>Custos e Taxas</h3>
-                    <div class="faq-questions">
-                        <p><a href="pagina15.html">Quais são as taxas associadas aos investimentos e transações?</a></p>
-                        <p><a href="pagina16.html">Como são calculadas as taxas de saque e depósito?</a></p>
-                    </div>
-                    <a href="custos_e_taxas.html" class="read-more">Ler mais →</a>
-                </div>
-                <div class="faq-item">
-                    <h3>Problemas e Soluções</h3>
-                    <div class="faq-questions">
-                        <p><a href="pagina17.html">O que fazer se eu tiver um bloqueio no aplicativo?</a></p>
-                        <p><a href="pagina18.html">Como resolver problemas de acesso ou erros no site?</a></p>
-                    </div>
-                    <a href="problemas_e_solucoes.html" class="read-more">Ler mais →</a>
-                </div>
+            <a href="conta_e_login.html" class="read-more">Ler mais →</a>
+          </div>
+          <div class="faq-item">
+            <h3>Investimentos e Carteiras</h3>
+            <div class="faq-questions">
+              <p>
+                <a href="pagina5.html"
+                  >Como faço investimentos em criptomoedas, ativos fixos e
+                  variáveis, e fundos imobiliários?</a
+                >
+              </p>
+              <p>
+                <a href="pagina6.html"
+                  >Quais são as opções de carteira digital e física
+                  disponíveis?</a
+                >
+              </p>
+              <p>
+                <a href="pagina7.html"
+                  >Como visualizo e interpreto os gráficos de investimento?</a
+                >
+              </p>
             </div>
-        </section>
+            <a href="investimentos_e_carteiras.html" class="read-more"
+              >Ler mais →</a
+            >
+          </div>
+          <div class="faq-item">
+            <h3>Suporte ao Cliente</h3>
+            <div class="faq-questions">
+              <p>
+                <a href="pagina8.html"
+                  >Como posso entrar em contato com o suporte ao cliente?</a
+                >
+              </p>
+              <p>
+                <a href="pagina9.html"
+                  >O que fazer se eu tiver um problema técnico ou uma dúvida
+                  específica?</a
+                >
+              </p>
+              <p>
+                <a href="pagina10.html"
+                  >Qual é o horário de atendimento do suporte ao cliente?</a
+                >
+              </p>
+            </div>
+            <a href="suporte_ao_cliente.html" class="read-more">Ler mais →</a>
+          </div>
+          <div class="faq-item">
+            <h3>Saldo e Transações</h3>
+            <div class="faq-questions">
+              <p>
+                <a href="pagina11.html">Como crio uma conta na Capital Wise?</a>
+              </p>
+              <p>
+                <a href="pagina12.html"
+                  >O que fazer se eu esquecer minha senha?</a
+                >
+              </p>
+              <p>
+                <a href="pagina13.html"
+                  >Como faço a autenticação em duas etapas?</a
+                >
+              </p>
+              <p>
+                <a href="pagina14.html">Como atualizo meus dados pessoais?</a>
+              </p>
+            </div>
+            <a href="saldo_e_transacoes.html" class="read-more">Ler mais →</a>
+          </div>
+          <div class="faq-item">
+            <h3>Custos e Taxas</h3>
+            <div class="faq-questions">
+              <p>
+                <a href="pagina15.html"
+                  >Quais são as taxas associadas aos investimentos e
+                  transações?</a
+                >
+              </p>
+              <p>
+                <a href="pagina16.html"
+                  >Como são calculadas as taxas de saque e depósito?</a
+                >
+              </p>
+            </div>
+            <a href="custos_e_taxas.html" class="read-more">Ler mais →</a>
+          </div>
+          <div class="faq-item">
+            <h3>Problemas e Soluções</h3>
+            <div class="faq-questions">
+              <p>
+                <a href="pagina17.html"
+                  >O que fazer se eu tiver um bloqueio no aplicativo?</a
+                >
+              </p>
+              <p>
+                <a href="pagina18.html"
+                  >Como resolver problemas de acesso ou erros no site?</a
+                >
+              </p>
+            </div>
+            <a href="problemas_e_solucoes.html" class="read-more">Ler mais →</a>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="suporte.js"></script>
-</body>
-
+  </body>
 </html>
