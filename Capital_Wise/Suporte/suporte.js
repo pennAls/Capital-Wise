@@ -47,9 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const chatBox = document.getElementById("chatBox");
   const confirmationBox = document.getElementById("confirmationBox");
   const chatContent = document.getElementById("chatContent");
+  const endChatButton = document.querySelector(".end-chat-button");
+  const cancelCloseButton = document.querySelector(".cancel-button");
 
-  // Função para abrir o chat e iniciar a animação de boas-vindas
-  let isChatStarted = false; // Nova variável para controlar o estado do chat
+  let isChatStarted = false; 
+
+  function showTypingAnimation() {
+    chatContent.innerHTML = "Bem-vindo ao chatbot!";
+  }
+
   function toggleChat() {
     if (chatBox.style.display === "none" || chatBox.style.display === "") {
       chatBox.style.display = "block";
@@ -86,6 +92,38 @@ document.addEventListener("DOMContentLoaded", function () {
       showWelcomeMessages();
     }, 2000); // 2 segundos
   }
+
+  // Função para finalizar o chat
+  function endChat() {
+    confirmationBox.style.display = "none";
+    chatBox.style.display = "none";
+    chatContent.innerHTML = ""; // Limpa todas as mensagens do chat
+    
+    isChatStarted = false; // Reseta o estado da conversa para o início
+  }
+
+  // Adiciona o evento de clique para finalizar o chat
+  endChatButton.addEventListener("click", endChat);
+
+  // Função para cancelar o fechamento do chat
+  function cancelClose() {
+    confirmationBox.style.display = "none";
+  }
+
+  // Adiciona o evento de clique para o botão de cancelar
+  if (cancelCloseButton) {
+    cancelCloseButton.addEventListener("click", cancelClose);
+  }
+
+  document.querySelector(".chat-button").addEventListener("click", toggleChat);
+
+  closeButton.addEventListener("click", function () {
+    confirmationBox.style.display = "block";
+  });
+
+  minimizeButton.addEventListener("click", function () {
+    chatBox.style.display = "none";
+  });
 
   // Mensagens de boas-vindas
   function showWelcomeMessages() {
