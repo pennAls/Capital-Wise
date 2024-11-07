@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <script src="grafico.js"> </script>
+    <script src="grafico.js"></script>
     <link rel="stylesheet" href="grafico.css">
-    <title>Graficos</title>
+    <title>Gráficos</title>
 </head>
-
-
 <body>
   <header>
     <div class="box_header">
       <figure>
         <img
           class="icon"
-          src="/Capital_Wise/imgs/logo.jpg"
+          src="/Capital_Wise/imgs/logo_transparente.png"
           alt="Logomarca da empresa"
         />
       </figure>
       <div class="link_box">
-        <a class="link1" href="">Central de Ajuda</a>
-        <a class="link2" href="#">Investimentos</a>
+        <a class="link1" href="/Capital_Wise/Suporte/suporte.html">Central de Ajuda</a>
+        <a class="link2" href="/Capital_Wise/Tela_Compra/compra.html">Investimentos</a>
       </div>
       <div class="button_box">
         <div class="wallet">
@@ -29,46 +27,61 @@
           <img
             class="people"
             src="/Capital_Wise/imgs/people_icon1.png"
-            alt=""
+            alt="Ícone de usuário"
           />
         </div>
-        <div style="margin: auto;">
+        <div style="margin: auto">
           <button class="sair-buttom">Sair</button>
-        </div>   
+        </div>
       </div>
     </div>
   </header>
 
-    <main>
-        <div class="titulo">Relatório de <br>
-            Investimento</div>
+  <main>
+    <div class="titulo">Relatório de <br> Investimento</div>
 
-        <div>
-            <div class="caixa-esquerda"><img src="../imgs/BNB-logo.png" alt="" width="35" height="35">BNB</div>
-            <div class="caixa-vender">Vender</div>
-        </div>
+    <div>
+      <div class="caixa-esquerda">
+        <img src="../imgs/BNB-logo.png" alt="Logo BNB" width="35" height="35">BNB
+      </div>
+      <div class="caixa-vender">Vender</div>
+    </div>
 
-        <div class="caixa-centro">
-            <p>Total Comprado</p>
-            <span class="valor-laranja">R$ 12.000</span>
-            <p>__________________</p>
-            <p>Cotação Atual</p>
-            <span class="valor-laranja">R$ 10.500</span>
-            <p>__________________</p>
-            <p>Valor da Moeda</p>
-            <span class="valor-verde">+ 0,46%</span>
-        </div>
+    <div class="caixa-centro">
+      <p>Total Comprado</p>
+      <span class="valor-laranja">R$ 12.000</span>
+      <p>__________________</p>
+      <p>Cotação Atual</p>
+      <span class="valor-laranja">R$ 10.500</span>
+      <p>__________________</p>
+      <p>Valor da Moeda</p>
+      <span class="valor-verde">+ 0,46%</span>
+    </div>
 
-        <div class="caixa-direita">
-            <div class="titulo-direita">Variação ao longo do tempo</div>
-            <canvas id="lineChart"></canvas>
-        </div>
-    </main>
-    <div class="caixa-grande">
-      <img src="https://conteudos.xpi.com.br/wp-content/uploads/2024/04/image_46b290.png" alt="" width="1050" height="625" />
+    <div class="caixa-direita">
+      <div class="titulo-direita">Variação ao longo do tempo</div>
+      <canvas id="lineChart"></canvas>
+    </div>
+  </main>
+
+  <div class="caixa-grande">
+    <img src="https://conteudos.xpi.com.br/wp-content/uploads/2024/04/image_46b290.png" alt="Gráfico do mercado" width="1050" height="625" />
   </div>
+
+  <a href="/Capital_Wise/investimento_usuario/Criptos.html" class="caixa-voltar">Voltar</a>
+
   <footer>
-    <a href="Tela Principal" class="caixa-voltar">Voltar</a>
+    <img
+      style="width: 100px"
+      src="/Capital_Wise/imgs/logo.jpg"
+      alt="Logomarca da empresa"
+    />
+    <p class="footer_text">@CapitalWise - Todos os direitos reservados</p>
+    <div class="social_icons">
+      <img class="social" src="/Capital_Wise/imgs/whatsapp 1.png" alt="Ícone do Whatsapp" />
+      <img class="social" src="/Capital_Wise/imgs/instagram 1.png" alt="Ícone do Instagram" />
+      <img class="social" src="/Capital_Wise/imgs/linkedin (1) 1.png" alt="Ícone do LinkedIn" />
+    </div>
   </footer>
 </body>
 </html>
