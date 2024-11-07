@@ -58,7 +58,7 @@ class Form {
         today.getMonth() > month - 1 ||
         (today.getMonth() === month - 1 && today.getDate() >= day);
 
-      if (age < 18 || (age === 18 && !hasHadBirthday)) {
+      if (age < 18 || (age === 18 && !hasHadBirthday) || age > 100) {
         dateError.style.display = "block";
         this.dataValid = false;
       } else {
