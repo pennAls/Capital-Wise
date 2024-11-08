@@ -474,13 +474,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "chatbot"
         );
       }, 1000);
-
-      setTimeout(() => {
-        addMessageToChat(
-          "Poderia, por favor, informar seu e-mail? 👇🏼",
-          "chatbot"
-        );
-      }, 2000);
     }
   }
 
