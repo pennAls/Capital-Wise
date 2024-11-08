@@ -93,12 +93,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000); // 2 segundos
   }
 
-  // Função para finalizar o chat
+
   function endChat() {
     confirmationBox.style.display = "none";
     chatBox.style.display = "none";
     chatContent.innerHTML = ""; // Limpa todas as mensagens do chat
     
+    // Mostra a caixa de seleção após o fechamento do chat
+    const selectionBox = document.querySelector("#yourSelectionBoxId"); // Substitua pelo ID correto
+    if (selectionBox) {
+      selectionBox.style.display = "block"; // Torna a caixa visível
+    }
+  
     isChatStarted = false; // Reseta o estado da conversa para o início
   }
 
